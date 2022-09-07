@@ -3,19 +3,21 @@
     color: black;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding-left: 2vw;
+    /* justify-content: space-between; */
+    /* padding-left: 2vw;
     padding-right: 2vw;
-    padding-top: 5vh;
-    width: 80vw;
-    width: 100%;
-    margin: auto;
+    padding-top: 5vh; */
+    /* width: 80vw; */
+    /* width: 100%; */
+    margin-left: 10vw;
+    /* margin-right:10vw; */
 }
 
 #splash-text {
-    display: table-cell;
-    width: 50%;
-    vertical-align: middle;
+    display: flex;
+    /* display: table-cell; */
+    width: 100%;
+    /* vertical-align: middle; */
     font-family: "Cosmica-Regular" !important;
     font-size: 16px !important;
     line-height: 1.5 !important;
@@ -24,23 +26,34 @@
     flex-direction: column;
     margin-top: auto;
     margin-bottom: auto;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
 
 } 
+#splash-text a {
+    color: black;
+}
+
 .first-text {
-    display: flex;
-    /* align-items: flex-end; */
-    width: 10vw;
-    /* text:  */
+    /* display: flex;
+    align-items: flex-end; */
+    width: 25vw; 
+    font-size: 30px;
+    font-family: "Cosmica-Semibold" !important;
+    line-height: 46px !important;
 }
 .second-text {
-    display: flex;
-    width: 10vw; 
+    /* display: flex;
+    align-items: center; */
+    width: 25vw; 
+    font-family: "Cosmica-Regular" !important;
+    line-height: 28px !important;
+    margin-top: 16px;
 }
 .splash-image img {
     /* position: absolute; */
-    width: 100%;
-    height: 100%;
+    width: 50vw;
+    height: 80vh;
     top: 0;
     left: 0;
     
