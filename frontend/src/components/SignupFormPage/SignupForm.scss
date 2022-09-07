@@ -1,0 +1,27 @@
+.signup-form {
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: 15vh;
+    width: 30vw;
+    input, .signup-button {
+        width: stretch;
+        margin-bottom: 2vh;
+        // padding: 2vh;
+        padding: 13px 15px
+    }
+}
+
+.text-header {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.demoUserButton {
+    width: 30%;
+    padding: 1vh;
+}

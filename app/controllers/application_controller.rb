@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::Base
+class ApplicationController < ActionController::API
   include ActionController::RequestForgeryProtection
 
     rescue_from StandardError, with: :unhandled_error
@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
         end
       
         if current_user
-          render json: { user: current_user.slice('id', 'username', 'session_token') }
+          render json: { user: current_user.slice('id', 'email', 'session_token') }
         else
           render json: ['No current user']
         end

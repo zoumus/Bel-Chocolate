@@ -17,27 +17,34 @@ ApplicationRecord.transaction do
     puts "Creating users..."
     # Create one user with an easy to remember username, email, and password:
     u1 = User.create!( 
+      email: 'zoubug@gmail.com', 
+      first_name: 'Zuzu',
+      last_name: 'Chaoui',
+      password: '123456'
+    )
+
+    u2 = User.create!( 
       email: 'milka@yahoo.fr', 
       first_name: 'Marc',
       last_name: 'Den',
       password: '123456'
     )
 
-    u2 = User.create!( 
+    u3 = User.create!( 
         email: 'mars@hotmail.fr', 
         first_name: 'Leila',
         last_name: 'Dal',
         password: '123456'
     )
 
-    u3 = User.create!( 
+    u4 = User.create!( 
         email: 'lion@gmail.com', 
         first_name: 'Mel',
         last_name: 'Hub',
         password: '123456'
     )
 
-    u4 = User.create!( 
+    u5 = User.create!( 
         email: 'kinder@love.io', 
         first_name: 'Jen',
         last_name: 'Noraw',
@@ -45,7 +52,7 @@ ApplicationRecord.transaction do
     )
   
     # More users
-    16.times do 
+    15.times do 
       User.create!({
         first_name: Faker::Name.first_name,
         last_name: Faker::Name.last_name,

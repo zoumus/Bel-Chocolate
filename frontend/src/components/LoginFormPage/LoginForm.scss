@@ -1,0 +1,70 @@
+
+.loginForm {
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: 15vh;
+    width: 30vw;
+    input, .login-button {
+        width: stretch;
+        margin-bottom: 2vh;
+        padding: 13px 15px;
+    }
+    p, span, a {
+        font-family: "Cosmica-Regular" !important;
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+    }
+}
+
+#textHeader {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.demoUserButton {
+    width: 30%;
+    padding: 1vh;
+}
+input[type=text]:focus {
+    border: 1px solid rgb(17, 16, 16);
+    outline: none;
+}
+input[type=password]:focus {
+    border: 1px solid rgb(17, 16, 16);
+    outline: none;
+}
+input[type=text] {
+    border: 1px solid rgb(199, 187, 187);
+    outline: none;
+}
+input[type=password] {
+    border: 1px solid rgb(234, 226, 226);
+    outline: none;
+}
+button {
+    background-color: rgb(64, 61, 61);
+    color: white;
+    border: none;
+    font-size: 17px;
+    margin-top:2vh;
+}
+#bottomForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#bottomForm span {
+    cursor: pointer;
+    text-decoration: underline;
+}
+#bottomForm a {
+    color: black;
+    text-decoration: underline;
+}
+
+

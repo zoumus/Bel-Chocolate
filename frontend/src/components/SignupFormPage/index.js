@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import * as sessionActions from "../../store/session";
-import './SignupForm.css';
+import './SignupForm.scss';
 
 function SignupFormPage() {
   const dispatch = useDispatch();
@@ -38,57 +38,67 @@ function SignupFormPage() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className='signup-form'>
+        <form onSubmit={handleSubmit}>
+          <div className='text-header'>
+            <h1>Register</h1>
+            <p>Please fill in the information below:</p>
+          </div>
       <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
       </ul>
       <label>
-        Email
         <input
           type="text"
           value={email}
+          placeholder='Email'
           onChange={(e) => setEmail(e.target.value)}
           required
         />
       </label>
       <label>
-        First Name
+        
         <input
           type="text"
           value={firstName}
+          placeholder='First Name'
           onChange={(e) => setFirstName(e.target.value)}
           required
         />
       </label>
       <label>
-        Last Name
+        
         <input
           type="text"
           value={lastName}
+          placeholder='Last Name'
           onChange={(e) => setLastName(e.target.value)}
           required
         />
       </label>
       <label>
-        Password
+        
         <input
           type="password"
           value={password}
+          placeholder='Password'
           onChange={(e) => setPassword(e.target.value)}
           required
         />
       </label>
       <label>
-        Confirm Password
+        
         <input
           type="password"
           value={confirmPassword}
+          placeholder='Confirm Password'
           onChange={(e) => setConfirmPassword(e.target.value)}
           required
         />
       </label>
-      <button type="submit">CREATE MY ACOUNT</button>
+      <button type="submit" className='signup-button'>CREATE MY ACOUNT</button>
     </form>
+    </div>
   );
 }
 
