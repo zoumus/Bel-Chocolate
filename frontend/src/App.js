@@ -5,6 +5,8 @@ import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
 import HomePage from "./components/HomePage";
 import ProfileButton from './components/Navigation/ProfileButton';
+import ProductIndex from "./components/ProductPage/ProductIndex";
+import ProductShow from "./components/ProductPage/ProductShow";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/signup">
           <SignupFormPage />
         </Route>
+        <Route exact path="/products" component={ProductIndex}/>
+        <Route exact path="/products/:productId" component={ProductShow}/>
       </Switch>
     </>
   );
