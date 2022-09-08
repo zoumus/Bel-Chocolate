@@ -97,7 +97,7 @@ ApplicationRecord.transaction do
       name: 'Dark Chocolate Truffles: 16 pieces',
       description: 'A curated assortment of dark chocolate truffles in vivid flavors from comforting and creamy ganaches, to rich umami fillings and delightful floral crunches.',
       price: 42.00,
-      category_id: c1.id
+      category_id: c2.id
     )
     file2 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/p2.jpeg')
     p2.picture.attach(io: file2, filename: 'p2.jpeg')
@@ -106,7 +106,7 @@ ApplicationRecord.transaction do
       name: 'Dark Chocolate Truffles: 24 pieces',
       description: 'A curated assortment of dark chocolate truffles in vivid flavors from comforting and creamy ganaches, to rich umami fillings and delightful floral crunches.',
       price: 56.00,
-      category_id: c1.id
+      category_id: c2.id
     )
     file3 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/p3.jpeg')
     p3.picture.attach(io: file3, filename: 'p3.jpeg')
@@ -115,7 +115,7 @@ ApplicationRecord.transaction do
       name: 'Dark Chocolate Truffles: 6 pieces',
       description: 'This is a mouth-melting gourmet chocolate box for curious food lovers.',
       price: 519.00,
-      category_id: c1.id
+      category_id: c2.id
     )
     file4 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/p4.jpeg')
     p4.picture.attach(io: file4, filename: 'p4.jpeg')
@@ -170,7 +170,7 @@ ApplicationRecord.transaction do
       name: 'Vegan Dark Chocolate Truffles: 9 pieces',
       description: 'A curated assortment of vegan dark chocolate truffles in three deeply decadent flavors, this is a mouth-melting vegan chocolate box for serious food lovers.',
       price: 24.00,
-      category_id: c1.id
+      category_id: c2.id
     )
     file10 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/9_Vegan_Chocolate_Truffles_600x.jpeg')
     p10.picture.attach(io: file10, filename: '9_Vegan_Chocolate_Truffles_600x.jpeg')
@@ -179,7 +179,7 @@ ApplicationRecord.transaction do
       name: 'Deep Flavor Experience” Chocolate Gift Box',
       description: 'An experiential chocolate gift box with flavor profiles & eye candy that cant be found elsewhere. Vivid flavors, comforting & creamy ganaches, and delightful crunches.',
       price: 74.00,
-      category_id: c1.id
+      category_id: c2.id
     )
     file11 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/san_francisco_chocolate_gift_box_600x.jpeg')
     p11.picture.attach(io: file11, filename: 'san_francisco_chocolate_gift_box_600x.jpeg')

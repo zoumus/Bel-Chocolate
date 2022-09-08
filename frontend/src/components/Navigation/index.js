@@ -11,10 +11,10 @@ function Navigation() {
     <div className="links-icons">
       <div className='left'>
         <div className='categories'>
-            <div><NavLink exact to="/">Shop All</NavLink></div>
+            <div><NavLink exact to="/products">Shop All</NavLink></div>
             <div><NavLink exact to="/">Truffles</NavLink></div>
             <div><NavLink exact to="/">Gifts</NavLink></div>
-            <div><NavLink exact to="/">Info</NavLink></div>
+            <div><NavLink exact to="/about">Info</NavLink></div>
             <div><NavLink exact to="/">Weddings & Events</NavLink></div>
         </div>
       </div>

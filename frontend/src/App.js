@@ -7,6 +7,8 @@ import HomePage from "./components/HomePage";
 import ProfileButton from './components/Navigation/ProfileButton';
 import ProductIndex from "./components/ProductPage/ProductIndex";
 import ProductShow from "./components/ProductPage/ProductShow";
+import AboutPage from './components/AboutPage/AboutPage.js';
+import CategoryIndex from './components/CategoryPage/CategoryIndex.js'
 
 function App() {
   return (
@@ -16,17 +18,27 @@ function App() {
         <Route exact path="/">
           <HomePage />
         </Route>
-        <Route path='/account'>
+        <Route exact path='/account'>
           <ProfileButton />
         </Route>
-        <Route path="/login">
+        <Route exact path="/login">
           <LoginFormPage />
         </Route>
-        <Route path="/signup">
+        <Route exact path="/signup">
           <SignupFormPage />
         </Route>
-        <Route exact path="/products" component={ProductIndex}/>
-        <Route exact path="/products/:productId" component={ProductShow}/>
+        <Route exact path="/products">
+          <ProductIndex/>
+        </Route>
+        <Route exact path="/products/:productId">
+          <ProductShow/>
+        </Route>
+        <Route exact path="/products/category/:categoryId">
+          <CategoryIndex/>
+        </Route> 
+        <Route exact path="/about">
+          <AboutPage/>
+        </Route>
       </Switch>
     </>
   );

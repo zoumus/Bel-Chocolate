@@ -1,3 +1,4 @@
+import csrfFetch from "./csrf";
 
 export const RECEIVE_PRODUCTS = 'products/RECEIVE_PRODUCTS'
 export const RECEIVE_PRODUCT = 'products/RECEIVE_PRODUCT'
@@ -27,19 +28,21 @@ export const getProducts = state => {
 }
 
 export const fetchProducts = ()=> async(dispatch) => {
-    const response = await fetch('/api/products')
-    if (response.ok){
-        const products = await response.json()
-        dispatch(receiveProducts(products))
-    }
+    const res = await csrfFetch('/api/products')
+    const products = await res.json()
+    dispatch(receiveProducts(products))
 }
 
 export const fetchProduct = (productId)=> async(dispatch) => {
-    const response = await fetch(`/api/products/${productId}`)
-    if (response.ok){
-        const product = await response.json()
-        dispatch(receiveProduct(product))
-    }
+    const res = await csrfFetch(`/api/products/${productId}`)
+    const product = await res.json()
+    dispatch(receiveProduct(product))
+}
+
+export const fetchProductsByCategory = (categoryId)=> async(dispatch) => {
+    const res = await csrfFetch(`/api/categories/${categoryId}/products`)
+    const products = await res.json()
+    dispatch(receiveProducts(products))
 }
 
 const productsReducer = (state={},action) => {
@@ -47,9 +50,10 @@ const productsReducer = (state={},action) => {
     const newState = {...state} 
     switch(action.type){
         case RECEIVE_PRODUCTS:
-            return {...newState,...action.payload}
+            return action.payload.products
+            // return {...newState, ...action.payload}
         case RECEIVE_PRODUCT:
-            newState[action.product.id] = action.product
+            newState[action.payload.product.id] = action.payload.product;
             return newState;
         default:
             return state;
