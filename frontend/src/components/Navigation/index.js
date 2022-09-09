@@ -2,23 +2,36 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useDispatch} from "react-redux";
-import { fetchByCategory } from '../../store/product';
-// import ProfileButton from './ProfileButton';
+import { fetchByCategory, fetchProducts } from '../../store/product';
 import './Navigation.css';
+import ProductIndex from '../ProductPage/ProductIndex';
 
 function Navigation() { 
   const sessionUser = useSelector(state => state.session.user);
   const dispatch = useDispatch();
-  
+
+  // const handleClick = (e) => {
+  //   e.preventDefault();
+  //   if(e.target.className === "shop-all") {
+  //     dispatch(fetchProducts())
+  //   } else if(e.target.className === "truffles") {
+  //     dispatch(fetchByCategory(1));
+  //   } else if(e.target.className === "bars") {
+  //     dispatch(fetchByCategory(2));
+  //   } else if(e.target.className === "sets") {
+  //     dispatch(fetchByCategory(3));
+  //   }
+  // }
   
   return (
     <div className="links-icons">
       <div className='left'>
         <div className='categories'>
-            <div><NavLink exact to="/products">Shop All</NavLink></div>
-            <div onClick={()=>dispatch(fetchByCategory(1))}>Truffles</div>
-            <div onClick={()=>dispatch(fetchByCategory(2))}>Bars</div>
-            <div onClick={()=>dispatch(fetchByCategory(3))}>Sets</div>
+            <div className="shop-all" onClick={()=>dispatch(fetchProducts())}>Shop All</div>
+            <div className="truffles" onClick={()=> dispatch(fetchByCategory(1))}>Truffles</div>
+            <div className="bars" onClick={()=> dispatch(fetchByCategory(2))}>Bars</div>
+            <div className="sets" onClick={()=> dispatch(fetchByCategory(3))}>Sets</div>
+
             <div><NavLink exact to="/About">Info</NavLink></div>
         </div>
       </div>
@@ -45,3 +58,5 @@ function Navigation() {
   )
 }
 export default Navigation;
+
+{/* <div><NavLink exact to="/products">Shop All</NavLink></div> */}

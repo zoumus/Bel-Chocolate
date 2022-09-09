@@ -23,6 +23,7 @@
 }
 .categories div{
     padding: 10%;
+    cursor: pointer;
 }
 .categories a {
     color: black;
