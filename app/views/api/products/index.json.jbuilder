@@ -6,7 +6,7 @@
     
 # end
 
-json.products({})
+# json.products({})
 
 json.products do
   @products.each do |product|

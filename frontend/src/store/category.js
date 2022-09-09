@@ -6,14 +6,20 @@ export const receiveCategories = (payload) => ({
     payload
 })
 
+
 export const getCategories = state => {
     if (!state || !state.categories) return [];
-    return Object.values(state.categoriess)
+    return Object.values(state.categories)
 }
 
 export const fetchCategories = ()=> async(dispatch) => {
     const res = await csrfFetch('/api/categories')
+    // debugger
+    console.log(res, 'res')
+
     const categories = await res.json()
+    console.log(categories, 'categ')
+
     dispatch(receiveCategories(categories))
 }
 

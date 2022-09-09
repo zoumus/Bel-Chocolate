@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useDispatch} from "react-redux";
 import { fetchByCategory, fetchProducts } from '../../store/product';
@@ -27,10 +27,10 @@ function Navigation() {
     <div className="links-icons">
       <div className='left'>
         <div className='categories'>
-            <div className="shop-all" onClick={()=>dispatch(fetchProducts())}>Shop All</div>
-            <div className="truffles" onClick={()=> dispatch(fetchByCategory(1))}>Truffles</div>
-            <div className="bars" onClick={()=> dispatch(fetchByCategory(2))}>Bars</div>
-            <div className="sets" onClick={()=> dispatch(fetchByCategory(3))}>Sets</div>
+            <Link to="/products"><div className="shop-all" onClick={()=>dispatch(fetchProducts())}>Shop All</div></Link>
+            <Link to="/products/category/1"><div className="truffles" onClick={()=> dispatch(fetchByCategory(1))}>Truffles</div></Link>
+            <Link to ="/products/category/2"><div className="bars" onClick={()=> dispatch(fetchByCategory(2))}>Bars</div></Link>
+            <Link to="/products/category/3"><div className="sets" onClick={()=> dispatch(fetchByCategory(3))}>Sets</div></Link>
 
             <div><NavLink exact to="/About">Info</NavLink></div>
         </div>
@@ -60,3 +60,7 @@ function Navigation() {
 export default Navigation;
 
 {/* <div><NavLink exact to="/products">Shop All</NavLink></div> */}
+{/* <Link to="/products"><div className="shop-all" onClick={()=>dispatch(fetchProducts())}>Shop All</div></Link>
+            <Link to='/products'><div className="truffles" onClick={()=> dispatch(fetchByCategory(1))}>Truffles</div></Link>
+            <div className="bars" onClick={()=> dispatch(fetchByCategory(2))}>Bars</div>
+            <div className="sets" onClick={()=> dispatch(fetchByCategory(3))}>Sets</div> */}

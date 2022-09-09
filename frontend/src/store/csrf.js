@@ -1,5 +1,5 @@
 async function csrfFetch(url, options = {}) {
-  console.log('cserfetch')
+  // console.log('cserfetch')
     
     options.method = options.method || 'GET';
     options.headers = options.headers || {};
@@ -10,11 +10,9 @@ async function csrfFetch(url, options = {}) {
         // options.headers['Accept'] = 'application/json'
       options.headers['X-CSRF-Token'] = sessionStorage.getItem('X-CSRF-Token');
     }
-    const res = await fetch(url, options);
-    // console.log(url)
-    // console.log(options)
     
-    // console.log(res, 'res')
+    const res = await fetch(url, options);
+  
     if (res.status >= 400) throw res;
     
     return res;
