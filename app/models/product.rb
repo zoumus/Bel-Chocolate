@@ -4,7 +4,7 @@ class Product < ApplicationRecord
 
     has_one_attached :picture
 
-    belongs_to :category,
-        foreign_key: :category_id,
-        class_name: :Category
+    # belongs_to :category,
+    #     foreign_key: :category_id,
+    #     class_name: :Category
 end

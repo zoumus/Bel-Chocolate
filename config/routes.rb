@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :categories, only: [:index] do 
       resources :products, only: [:index]
     end
+    get '/products/:category_id/category', to: "products#index"
   end
   get '*path', to: "static_pages#frontend_index"
 end

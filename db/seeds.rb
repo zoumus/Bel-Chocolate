@@ -73,22 +73,22 @@ ApplicationRecord.transaction do
       name: "All Product"
     )
     c2 = Category.create!(
-      name: "Dark Chocolate Truffles"
+      name: "Truffles"
     )
     c3 = Category.create!(
-      name: "Gourmet Chocolate Bars"
+      name: "Bars"
     )
     c4 = Category.create!(
-      name: "Chocolate Boxes & Sets"
+      name: "Sets"
     )
     c5 = Category.create!(
-      name: "Art & Wearables"
+      name: "Info"
     )
     p1 = Product.create!(
       name: 'Coconut Passionfruit Chocolate Bars',
       description: 'A delicious balance of bright tropical flavors and deeply decadent chocolate,creamy coconut white chocolate ganache with rich passionfruit caramel and milk chocolate crunch.',
       price: 14.00,
-      category_id: c1.id
+      category_id: 2
     )
     file1 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/p1.jpeg')
     p1.picture.attach(io: file1, filename: 'p1.jpeg')
@@ -97,7 +97,7 @@ ApplicationRecord.transaction do
       name: 'Dark Chocolate Truffles: 16 pieces',
       description: 'A curated assortment of dark chocolate truffles in vivid flavors from comforting and creamy ganaches, to rich umami fillings and delightful floral crunches.',
       price: 42.00,
-      category_id: c2.id
+      category_id: 1
     )
     file2 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/p2.jpeg')
     p2.picture.attach(io: file2, filename: 'p2.jpeg')
@@ -106,7 +106,7 @@ ApplicationRecord.transaction do
       name: 'Dark Chocolate Truffles: 24 pieces',
       description: 'A curated assortment of dark chocolate truffles in vivid flavors from comforting and creamy ganaches, to rich umami fillings and delightful floral crunches.',
       price: 56.00,
-      category_id: c2.id
+      category_id: 1
     )
     file3 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/p3.jpeg')
     p3.picture.attach(io: file3, filename: 'p3.jpeg')
@@ -115,7 +115,7 @@ ApplicationRecord.transaction do
       name: 'Dark Chocolate Truffles: 6 pieces',
       description: 'This is a mouth-melting gourmet chocolate box for curious food lovers.',
       price: 519.00,
-      category_id: c2.id
+      category_id: 1
     )
     file4 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/p4.jpeg')
     p4.picture.attach(io: file4, filename: 'p4.jpeg')
@@ -124,7 +124,7 @@ ApplicationRecord.transaction do
       name: 'Espresso Chocolate Bar',
       description: 'A decadent 70% dark chocolate bar filled with rich coffee ganache and crunchy cocoa nibs, this is a warming pick-me-up for espresso and chocolate lovers.',
       price: 14.00,
-      category_id: c1.id
+      category_id: 2
     )
     file5 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/p5.jpeg')
     p5.picture.attach(io: file5, filename: 'p5.jpeg')
@@ -133,7 +133,7 @@ ApplicationRecord.transaction do
       name: 'Strawberry Almond Chocolate Bars',
       description: 'Vivid Strawberry jam with toasty almond nougat on a crunchy chocolate shortbread base, a chocolatey PB&J fit for a king, queen, and everyone in-between.',
       price: 14.00,
-      category_id: c1.id
+      category_id: 2
     )
     file6 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/p6.jpeg')
     p6.picture.attach(io: file6, filename: 'p6.jpeg')
@@ -143,7 +143,7 @@ ApplicationRecord.transaction do
       name: 'Topogato E-Gift Card',
       description: 'They deserve handmade chocolate sweet treats, perfect for celebratory and thank you gifts, this e-gift card is conveniently sent to the recipient via email. The lucky receiver can easily order chocolate online.',
       price: 25.00,
-      category_id: c1.id
+      category_id: 5
     )
     file7 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/p7.jpeg')
     p7.picture.attach(io: file7, filename: 'p7.jpeg')
@@ -152,7 +152,7 @@ ApplicationRecord.transaction do
       name: 'Topogato Hat',
       description: '100% twill 6-panel hat in off-white with an embroidered Topogato logo and adjustable buckle closure',
       price: 25.00,
-      category_id: c1.id
+      category_id: 5
     )
     file8 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/p8.jpeg')
     p8.picture.attach(io: file8, filename: 'p8.jpeg')
@@ -161,7 +161,7 @@ ApplicationRecord.transaction do
       name: 'Topogato Tote',
       description: '12oz. 100% heavy cotton canvas tote in off-white with a screenprinted Topogato logo and matching 20" web canvas handles.',
       price: 12.00,
-      category_id: c1.id
+      category_id: 5
     )
     file9 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/p9.jpeg')
     p9.picture.attach(io: file9, filename: 'p8.jpeg')
@@ -170,7 +170,7 @@ ApplicationRecord.transaction do
       name: 'Vegan Dark Chocolate Truffles: 9 pieces',
       description: 'A curated assortment of vegan dark chocolate truffles in three deeply decadent flavors, this is a mouth-melting vegan chocolate box for serious food lovers.',
       price: 24.00,
-      category_id: c2.id
+      category_id: 1
     )
     file10 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/9_Vegan_Chocolate_Truffles_600x.jpeg')
     p10.picture.attach(io: file10, filename: '9_Vegan_Chocolate_Truffles_600x.jpeg')
@@ -179,7 +179,7 @@ ApplicationRecord.transaction do
       name: 'Deep Flavor Experience” Chocolate Gift Box',
       description: 'An experiential chocolate gift box with flavor profiles & eye candy that cant be found elsewhere. Vivid flavors, comforting & creamy ganaches, and delightful crunches.',
       price: 74.00,
-      category_id: c2.id
+      category_id: 3
     )
     file11 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/san_francisco_chocolate_gift_box_600x.jpeg')
     p11.picture.attach(io: file11, filename: 'san_francisco_chocolate_gift_box_600x.jpeg')
@@ -188,7 +188,7 @@ ApplicationRecord.transaction do
       name: 'Mouse” by Beau Monroe',
       description: '8” x 10” giclée art print on heavy 285gsm natural warm white paper. Signed, open edition.',
       price: 19.00,
-      category_id: c1.id
+      category_id: 5
     )
     file12 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/Mouse_Art_Print_600x.jpeg')
     p12.picture.attach(io: file12, filename: 'Mouse_Art_Print_600x.jpeg')
@@ -197,7 +197,7 @@ ApplicationRecord.transaction do
       name: 'New Sensations” Chocolate Box',
       description: 'A gourmet chocolate box unlike any other. We will let the flavors tell the story; each with a decadent 70% dark chocolate shell',
       price: 34.00,
-      category_id: c1.id
+      category_id: 3
     )
     file13 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/gourmet_chocolate_box_600x.jpeg')
     p13.picture.attach(io: file13, filename: 'gourmet_chocolate_box_600x.jpeg')
@@ -206,7 +206,7 @@ ApplicationRecord.transaction do
       name: 'New Sensations” Chocolate Box Mini',
       description: 'A gourmet chocolate box unlike any other. We will let the flavors tell the story; each with a decadent 70% dark chocolate shell',
       price: 16.00,
-      category_id: c1.id
+      category_id: 3
     )
     file14 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/gourmet_chocolate_box_mini_600x.jpeg')
     p14.picture.attach(io: file14, filename: 'gourmet_chocolate_box_mini_600x.jpeg')
@@ -215,7 +215,7 @@ ApplicationRecord.transaction do
       name: 'Rosebud” by Beau Monroe',
       description: 'A gourmet chocolate box unlike any other. We will let the flavors tell the story; each with a decadent 70% dark chocolate shell',
       price: 19.00,
-      category_id: c1.id
+      category_id: 5
     )
     file15 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/Rosebud_Art_Print_600x.jpeg')
     p15.picture.attach(io: file15, filename: 'Rosebud_Art_Print_600x.jpeg')

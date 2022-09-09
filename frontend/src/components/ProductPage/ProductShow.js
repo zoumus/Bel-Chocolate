@@ -1,51 +1,56 @@
-import React from "react";
-import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
+import "./ProductShow.css";
+import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { fetchProduct, getProduct } from "../../store/product";
-import './ProductShow.css';
+import { useEffect, useState } from "react";
 
 const ProductShow = () => {
-    const dispatch = useDispatch();
     const {productId} = useParams();
+    const dispatch = useDispatch();
     const product = useSelector(getProduct(productId));
     const [count, setCount] = useState(1);
 
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(fetchProduct(productId))
-    },[productId])
+    }, [productId])
 
-    if(!product) return null
-        
+    const handleInput = () => {
+        let input = parseInt(document.getElementById("show-input").value);
+        console.log(input + 1)
+        if (input > 0) {
+            setCount(input)
+        } else {
+            setCount("")
+        }
+    }
+    if(!product) return null;
+
     const {id, name, pictureUrl, price, description} = product;
-    return(
+    
+    return (
+        <>
         <div id="show-component">
             <div id="show-picture">
-                <img src={product.photoUrl} alt="product-picture"/>
+                <img src={product.pictureUrl} alt="product-picture"/>
             </div>
             <div id="show-text-container">
                     <div id="show-name">{product.name}</div>
-                    <div id="show-description">{product.description}</div>
                     <div id="show-price">${(Math.round(product.price * 100)/100).toFixed(2)}</div>
                     <div id="show-quantity-container">
-                        <label for="show-quantity-container" id="show-label">Select Quantity</label>
+                        <label htmlFor="show-quantity-container" id="show-label"></label>
                             <div className="show-quantity">
-                                <button onClick={() => setCount(parseInt(count) + 1)}>+</button>
-                                <button onClick={() => (setCount(parseInt(count) - 1) > 0 ? setCount(parseInt(count) - 1) : setCount(1))}>-</button>
+                                <button id='plus-button' onClick={() => setCount(parseInt(count) + 1)}>+</button>
+                                <input type="text" id="show-input" value={count} onChange={handleInput}></input>
+                                <button id='minus-button' onClick={() => ((parseInt(count) - 1) > 0 ? setCount(parseInt(count) - 1) : setCount(1))}>-</button>
                             </div>
                     </div>
                     <button id="show-add-button">Add to cart</button>
+                    <div id="show-description">{product.description}</div>
             </div>    
-        </div>  
+        </div>
+        </>
     )
 }
 
-{/* <>
-            <h1>{product.name}</h1>
-            <p>{product.price}</p>
-            <p>{product.description}</p>
-            {/* <p>{product.category}</p> */}
-            //<img src={product.pictureUrl}/>
-       // </> */}
-
-export default ProductShow; 
+export default ProductShow;

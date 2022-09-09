@@ -33,6 +33,13 @@ export const fetchProducts = ()=> async(dispatch) => {
     dispatch(receiveProducts(products))
 }
 
+export const fetchByCategory = (categoryId)=> async(dispatch) => {
+    
+    const res = await csrfFetch(`/api/products/${categoryId}/category`)
+    const products = await res.json()
+    dispatch(receiveProducts(products))
+}
+
 export const fetchProduct = (productId)=> async(dispatch) => {
     const res = await csrfFetch(`/api/products/${productId}`)
     const product = await res.json()
@@ -40,7 +47,7 @@ export const fetchProduct = (productId)=> async(dispatch) => {
 }
 
 export const fetchProductsByCategory = (categoryId)=> async(dispatch) => {
-    const res = await csrfFetch(`/api/categories/${categoryId}/products`)
+    const res = await csrfFetch(`/api/products/${categoryId}`)
     const products = await res.json()
     dispatch(receiveProducts(products))
 }

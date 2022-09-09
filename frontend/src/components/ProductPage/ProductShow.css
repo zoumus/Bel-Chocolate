@@ -1,0 +1,116 @@
+#show-component {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: nowrap; */
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 4.5vh;
+    margin-bottom: 10vh;
+}
+
+#show-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px;
+    margin-left: 10vw;
+}
+
+#show-text-container div {
+    /* margin-bottom: 1.5vh; */
+}
+
+#show-picture img {
+    height: 70vh;
+    width: 40vw;
+    /* border-radius: 5vh; */
+}
+
+#show-name {
+    font-size: 2vw;
+    font-family: "Cosmica-Semibold";
+    /* text-transform: uppercase; */
+}
+
+#show-description {
+    /* font-family: 'T-Star Regular'; */
+    font-family: "Cosmica-Regular";
+    font-size: 1.25vw;
+    line-height: 3.5vh;
+}
+
+#show-price {
+    font-size: 2vw; 
+    margin-top: 7%;
+}
+
+.show-quantity {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5vw;
+    border: 1px solid black;
+    align-items: center;
+    /* border-radius: 5vh; */
+    margin-top: 0.5vh;
+    width: 10vw;
+    padding: 1vh;
+    /* overflow: hidden; */
+}
+
+.show-quantity > button {
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    /* color: transparent; */
+}
+#minus-button #plus-button {
+    height: 100%;
+}
+
+.show-quantity input {
+    width: 3vw;
+    border: none;
+    font-size: 1vw;
+    text-align: center;
+}
+
+.show-quantity input:focus {
+    /* outline: none; */
+}
+
+#show-label {
+    font-family: 'T-Star Regular';
+    font-size: 0.8vw;
+    text-transform: uppercase;
+    padding-left: 0.25vw;
+}
+
+#show-add-button {
+    display: block;
+    border: 1px solid black;
+    /* border-radius: 5vh; */
+    font-size: 1.0vw;
+    margin-top: 5vh;
+    /* width: 13vw; */
+    padding: 0.75vw;
+    text-transform: uppercase;
+    /* margin-top: 10%; */
+}
+
+#show-add-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.show-quantity button:hover {
+    background-color: black;
+    color: white;
+    
+}
+#show-description {
+    margin-top: 7%;
+}
