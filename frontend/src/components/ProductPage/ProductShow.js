@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { fetchProduct, getProduct } from "../../store/product";
 import { useEffect, useState } from "react";
+import ReviewIndex from "../Review/ReviewIndex";
+import ReviewFormModal from "../Review/ReviewFormModal";
 
 const ProductShow = () => {
     const {productId} = useParams();
@@ -49,6 +51,9 @@ const ProductShow = () => {
                     <div id="show-description">{product.description}</div>
             </div>    
         </div>
+
+        <ReviewIndex />
+        <ReviewFormModal />
         </>
     )
 }

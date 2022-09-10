@@ -10,7 +10,6 @@ const ProductIndex = () => {
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(fetchProducts())
-        // products
     },[dispatch])
 
     return(

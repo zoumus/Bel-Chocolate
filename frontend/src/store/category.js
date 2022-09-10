@@ -14,11 +14,10 @@ export const getCategories = state => {
 
 export const fetchCategories = ()=> async(dispatch) => {
     const res = await csrfFetch('/api/categories')
-    // debugger
-    console.log(res, 'res')
+    
 
     const categories = await res.json()
-    console.log(categories, 'categ')
+    
 
     dispatch(receiveCategories(categories))
 }

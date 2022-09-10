@@ -1,5 +1,5 @@
 import csrfFetch from "./csrf"
-import { RECEIVE_PRODUCT } from "./products"
+import { RECEIVE_PRODUCT } from "./product"
 
 export const RECEIVE_REVIEW = 'reviews/RECEIVE_REVIEW'
 export const REMOVE_REVIEW = 'reviews/REMOVE_REVIEW'
@@ -18,10 +18,6 @@ export const getReviews = state => {
     return state?.reviews ? Object.values(state.reviews) : [];
 }
 
-// export const createReviews = review => async dispatch => {
-//     const response = await fetch()
-// }
-
 export const createReview = (review) => async dispatch => {
     const response = await csrfFetch(`/api/reviews`, {
         method: 'POST',
@@ -31,7 +27,18 @@ export const createReview = (review) => async dispatch => {
     if (response.ok) {
         const data = await response.json();
         dispatch(receiveReview(data));
-        // return data;
+        return data;
+    }
+}
+export const updateReview = (review) => async dispatch => {
+    const response = await csrfFetch(`/api/reviews/${review.id}`, {
+        method: 'PATCH',
+        body: JSON.stringify(review)
+    });
+    if (response.ok) {
+        const data = await response.json();
+        dispatch(receiveReview(data));
+        return data;
     }
 }
 
@@ -45,20 +52,23 @@ export const deleteReview = (reviewId) => async dispatch => {
     }
 }
 
-
 const reviewsReducer = (state = {}, action) => {
+    Object.freeze(state)
+    const newState = { ...state }
     switch (action.type) {
         case RECEIVE_PRODUCT:
-            return { ...state,...action.payload.reviews }
+            if(action.payload.reviews){
+                return action.payload.reviews
+            } else {
+                return newState;
+            }
         case RECEIVE_REVIEW:
             return { ...state, [action.review.id] : action.review }
-        case REMOVE_REVIEW:
-            const newState = { ...state }
-            delete newState[action.reviewId];
+        case REMOVE_REVIEW://add it to the current state
+            delete newState[action.reviewId];//action.payload.reviewid
             return newState;
         default:
             return state;
     }
 }
-
 export default reviewsReducer;

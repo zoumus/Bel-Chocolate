@@ -36,6 +36,9 @@ function App() {
         <Route exact path="/products/category/:categoryId">
           <CategoryIndex/>
         </Route> 
+        {/* <Route exact path="/products/category/:categoryId">
+          <CategoryIndex/>
+        </Route> */}
         <Route exact path="/about">
           <AboutPage/>
         </Route>
