@@ -18,9 +18,9 @@
     /* display: table-cell; */
     width: 100%;
     /* vertical-align: middle; */
-    font-family: "Cosmica-Regular" !important;
-    font-size: 16px !important;
-    line-height: 1.5 !important;
+    font-family: "Cosmica-Regular";
+    font-size: 16px;
+    line-height: 1.5;
     /* display: flex; */
     /* align-items: center; */
     flex-direction: column;

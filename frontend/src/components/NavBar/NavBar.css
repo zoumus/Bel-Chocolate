@@ -1,0 +1,11 @@
+.navbar-content {
+    background-color: #ab5b0e;
+    text-align: center;
+    display: block;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    letter-spacing: 0.015em;
+    color: white;
+    font-weight: lighter;
+}
+

@@ -9,10 +9,12 @@ import ProductIndex from "./components/ProductPage/ProductIndex";
 import ProductShow from "./components/ProductPage/ProductShow";
 import AboutPage from './components/AboutPage/AboutPage.js';
 import CategoryIndex from './components/CategoryPage/CategoryIndex.js'
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
   return (
     <>
+      <NavBar />
       <Navigation/>
       <Switch>
         <Route exact path="/">
@@ -36,9 +38,6 @@ function App() {
         <Route exact path="/products/category/:categoryId">
           <CategoryIndex/>
         </Route> 
-        {/* <Route exact path="/products/category/:categoryId">
-          <CategoryIndex/>
-        </Route> */}
         <Route exact path="/about">
           <AboutPage/>
         </Route>
@@ -48,3 +47,7 @@ function App() {
 }
 
 export default App;
+
+{/* <Route exact path="/products/category/:categoryId">
+    <CategoryIndex/>
+</Route> */}

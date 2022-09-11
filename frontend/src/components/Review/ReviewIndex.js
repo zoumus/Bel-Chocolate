@@ -9,20 +9,20 @@ const ReviewIndex = () => {
     const reviews = useSelector(getReviews);
 
         return(
-            <>
-                <div className="review-div">
-                    {reviews.map(review=>(
-                        <>
-                            <div className="review-title">{review.title}</div>
-                            <div className="review-body">{review.body}</div>
-                            <div className="review-rating">{review.rating}</div>
-
-                        </>
-                        
-                    ))}
-                </div>
             
-            </>
+            <div className="review-div">
+                {reviews.map(review=>(
+                <>
+                    <div className="display-reviews-info">
+                        <div className="review-title">{review.title}</div>
+                        <div className="review-body">{review.body}</div>
+                        <div className="review-rating">{review.rating}</div>
+                    </div>
+                </>
+                    
+                ))}
+            </div>
+            
             
         )
 }

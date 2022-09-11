@@ -6,8 +6,8 @@ const CategoriesIndexItem = ({category}) => {
 
     return(
         <>
-            <Link to={`/categories/${category.id}`}>{category.name}</Link>
-            <img src={category.pictureUrl}/>
+            <Link to={`/categories/${category.id}`}></Link>
+            {/* <img src={category.pictureUrl}/> */}
         </>
     )
 }

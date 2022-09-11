@@ -16,24 +16,17 @@
     margin-left: 10vw;
 }
 
-#show-text-container div {
-    /* margin-bottom: 1.5vh; */
-}
-
 #show-picture img {
     height: 70vh;
     width: 40vw;
-    /* border-radius: 5vh; */
 }
 
 #show-name {
     font-size: 2vw;
     font-family: "Cosmica-Semibold";
-    /* text-transform: uppercase; */
 }
 
 #show-description {
-    /* font-family: 'T-Star Regular'; */
     font-family: "Cosmica-Regular";
     font-size: 1.25vw;
     line-height: 3.5vh;
@@ -50,11 +43,9 @@
     font-size: 1.5vw;
     border: 1px solid black;
     align-items: center;
-    /* border-radius: 5vh; */
     margin-top: 0.5vh;
     width: 10vw;
     padding: 1vh;
-    /* overflow: hidden; */
 }
 
 .show-quantity > button {
@@ -65,7 +56,6 @@
     padding-right: 1vw;
     padding-top: 1vh;
     padding-bottom: 1vh;
-    /* color: transparent; */
 }
 #minus-button #plus-button {
     height: 100%;
@@ -92,13 +82,10 @@
 #show-add-button {
     display: block;
     border: 1px solid black;
-    /* border-radius: 5vh; */
     font-size: 1.0vw;
     margin-top: 5vh;
-    /* width: 13vw; */
     padding: 0.75vw;
     text-transform: uppercase;
-    /* margin-top: 10%; */
 }
 
 #show-add-button:hover {

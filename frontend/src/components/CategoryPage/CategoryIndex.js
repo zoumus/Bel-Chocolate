@@ -25,9 +25,12 @@ const CategoryIndex = () => {
     
     return(
         <>
+            <div className="header-desc">
+                <h1 id="product-header">{categories[categoryId].name}</h1>
+                <h1 id="product-description">{categories[categoryId].description}</h1>
+            </div>
+        
             <div className="category-item">
-                <h1>{categories[categoryId].name}</h1>
-
                 {products.map(product=>(
                 <ProductIndexItem key={product.id} product={product} />
             ))}

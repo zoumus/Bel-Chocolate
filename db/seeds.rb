@@ -70,19 +70,24 @@ ApplicationRecord.transaction do
     puts "Done!"
 
     c1 = Category.create!(
-      name: "All Product"
+      name: "All Product",
+      description: "All Product"
     )
     c2 = Category.create!(
-      name: "Truffles"
+      name: "Dark Chocolate Truffles",
+      description: "Curated assortments of dark chocolate truffles with rich, mouth-melting fillings."
     )
     c3 = Category.create!(
-      name: "Bars"
+      name: "Bars",
+      description: "Handmade chocolate bars with deeply decadent fillings. Artfully painted with cocoa butter."
     )
     c4 = Category.create!(
-      name: "Sets"
+      name: "Chocolate Boxes & Sets",
+      description: "Chocolate Boxes & Sets"
     )
     c5 = Category.create!(
-      name: "Info"
+      name: "Gifts",
+      description: "Gifts"
     )
     p1 = Product.create!(
       name: 'Coconut Passionfruit Chocolate Bars',
