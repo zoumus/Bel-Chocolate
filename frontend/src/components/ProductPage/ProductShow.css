@@ -19,6 +19,7 @@
 #show-picture img {
     height: 70vh;
     width: 40vw;
+    border-bottom: solid 1px;
 }
 
 #show-name {
@@ -99,5 +100,10 @@
     
 }
 #show-description {
-    margin-top: 7%;
+    /* margin-top: 7%; */
+}
+.desc-show {
+    font-weight: bold;
+    margin-top: 5vh;
+    font-size: 2.5vh;
 }

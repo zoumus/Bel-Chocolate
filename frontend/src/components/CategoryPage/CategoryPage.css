@@ -3,8 +3,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 2vh;
+    margin-bottom: 10vh;
 }
 
+#category-header {
+    font-size: 2.2vw;
+    text-align: center;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 4vh;
+    letter-spacing: 0.015em;
+    font-weight: bold;
+}
 #product-description {
-    font-size:100px;
+    font-size: 1vw;
+    text-align: center;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    letter-spacing: 0.015em;
+    width: 30vw;
 }

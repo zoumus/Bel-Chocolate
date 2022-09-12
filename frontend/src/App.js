@@ -8,8 +8,9 @@ import ProfileButton from './components/Navigation/ProfileButton';
 import ProductIndex from "./components/ProductPage/ProductIndex";
 import ProductShow from "./components/ProductPage/ProductShow";
 import AboutPage from './components/AboutPage/AboutPage.js';
-import CategoryIndex from './components/CategoryPage/CategoryIndex.js'
+// import CategoryIndex from './components/CategoryPage/CategoryIndex.js'
 import NavBar from './components/NavBar/NavBar';
+import CategoryIndex from './components/CategoryPage/CategoryIndex';
 
 function App() {
   return (

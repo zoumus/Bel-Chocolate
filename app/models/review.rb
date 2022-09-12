@@ -13,17 +13,20 @@
 #
 class Review < ApplicationRecord
     validates :rating, :title, presence: true
-    validates :rating, inclusion: { in: 1..5, message: "must be between 1 and 5" }
-    validates :body, length: {minimum: 50}
+    validates :rating, inclusion: { in: 1..5 }
+    validates :body, length: {minimum: 4}
+    validates :user_id, uniqueness: {scope: :product_id}
+      #validates a unique pairing between user_id and product_id to ensure 1 user
+      #can only create a review for that product
 
 
 
     belongs_to :user
     belongs_to :product
 
-    # validates :no_duplicate_reviiew
+    
 
-    def average_rating
-        return ((self.reviews.pluck(:rating)) / (self.reviews.length));
-    end
+    # def average_rating
+    #     return ((self.reviews.pluck(:rating)) / (self.reviews.length));
+    # end
 end

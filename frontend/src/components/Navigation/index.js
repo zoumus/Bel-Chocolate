@@ -9,19 +9,6 @@ import ProductIndex from '../ProductPage/ProductIndex';
 function Navigation() { 
   const sessionUser = useSelector(state => state.session.user);
   const dispatch = useDispatch();
-
-  // const handleClick = (e) => {
-  //   e.preventDefault();
-  //   if(e.target.className === "shop-all") {
-  //     dispatch(fetchProducts())
-  //   } else if(e.target.className === "truffles") {
-  //     dispatch(fetchByCategory(1));
-  //   } else if(e.target.className === "bars") {
-  //     dispatch(fetchByCategory(2));
-  //   } else if(e.target.className === "sets") {
-  //     dispatch(fetchByCategory(3));
-  //   }
-  // }
   
   return (
     <div className="links-icons">
@@ -36,7 +23,7 @@ function Navigation() {
       </div>
 
       <div className='middle'>
-          <NavLink exact to="/">Bel Chocolate</NavLink>
+          <NavLink exact to="/">BelChocolate</NavLink>
       </div>
       
         <div className='right'>

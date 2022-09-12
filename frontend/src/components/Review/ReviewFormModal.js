@@ -3,49 +3,94 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
-import { createReview } from '../../store/review';
+import { createReview,updateReview } from '../../store/review';
+// import StarRating from './StarRating';
+import { FaStar } from 'react-icons/fa';
 
-const ReviewFormModal = () => {
+const ReviewFormModal = ({setShowModal,selectedReview}) => {
 
+    const {productId} = useParams();
+    let editReview = true;
+
+    if (!selectedReview){
+       selectedReview = {
+        title: "",
+        body: "",
+        rating: 0 
+        }
+        editReview = false;
+    }
     const dispatch = useDispatch();
 
-    const [title,setTitle] = useState("")
-    const [body,setBody] = useState("")
-    const [rating,setRating] = useState("")
+    const [title,setTitle] = useState(selectedReview.title)
+    const [body,setBody] = useState(selectedReview.body)
+    const [rating,setRating] = useState(selectedReview.rating)
 
-    const handleSubmit = (e) => {       
+    const handleSubmit = (e) => {   
         e.preventDefault();
-        dispatch(createReview({title,body,rating}))
+        if (editReview){
+            dispatch(updateReview({title,body,rating,product_id:productId,id:selectedReview.id}))
+        }else{
+            dispatch(createReview({title,body,rating,product_id:productId}))
+        }
+        setShowModal(false)
     }
-    
-    return(
-        <form onSubmit={handleSubmit}>
-            <label>Review Title
-                <input 
-                    type="text"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    required
-                />
-            </label>
-            <label>Review 
-                <input 
-                    type="text"
-                    value={body}
-                    onChange={(e) => setBody(e.target.value)}
-                    required
-                />
-            </label>
-            <label>
-                <input
-                    type="number"
-                    value={rating}
-                    onChange={(e)=>setRating(e.target.value)}
-                />
-            </label>
-            
 
-        </form>
+    return(
+        <>
+            <div onClick={()=>setShowModal(false)} className="bg-modal">
+            </div>
+
+                <div className='review-modal'>
+                    <form onSubmit={handleSubmit} className="modal-form">
+                    <label className="rating-form">Overall Rating
+                    <div>
+                    {[...Array(5)].map((star, i) => {
+                    const ratingValue = i + 1;
+
+                    return (
+                        <label>
+                            <input type="radio"
+                                name="rating"
+                                value = {ratingValue}
+                                onClick={(e)=> setRating(e.target.value)} 
+                                />
+
+                            <FaStar  
+                                className = "star" 
+                                color={ratingValue <= (rating) ? "#ffc107" : "#e425e9"} 
+                                size={40} />
+                        
+                             </label>
+                            )
+                            })}
+                            
+                            </div>
+                        </label>
+                        <label className="title-form">Review Title
+                            <input 
+                                type="text"
+                                value={title}
+                                onChange={(e) => setTitle(e.target.value)}
+                                required
+                                />
+                        </label>
+                        <label className="body-form">Review
+                            <textarea
+                                rows="5" 
+                                cols="40"
+                                type="text"
+                                value={body}
+                                onChange={(e) => setBody(e.target.value)}
+                                required
+                                />
+                        </label>
+                        
+                        <button type="submit" >Submit Review</button>
+                 </form>
+            </div>
+         </>
+      
     )
 
 }

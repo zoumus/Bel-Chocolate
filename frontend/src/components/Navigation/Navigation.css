@@ -6,12 +6,13 @@
     display: flex;
     justify-content: space-between;
     border-bottom: solid 1px;
+    height: 12vh;
     
 }
 .categories  {
     display: flex;
     justify-content: center;
-    width: 15vw;
+    /* width: 15vw; */
     /* margin-left: 15%; */
     color: black;
 }
@@ -19,19 +20,26 @@
     text-decoration: none;
 }
 .left {
+    margin-top: 1.5vh;
     margin-left: 10%;
 }
 .categories div{
     padding: 10%;
     cursor: pointer;
+    width: 3vw;
+    font-weight: bold;
 }
+
 .categories a {
     color: black;
+    width: 50vw;
 }
 .middle{
-    font-size: 3vw;
+    font-size: 3.5vw;
     display: flex;
     align-items: center;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif
 }
 .middle a {
     color: black;
@@ -46,4 +54,6 @@
 }
 .right i {
     padding: 10px;
+    font-size: 1.5vw;
+    color: black;
 }

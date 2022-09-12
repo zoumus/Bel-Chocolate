@@ -1,6 +1,16 @@
 
 .user-profile {
-    margin-top: 2vh;
+    margin-top: 10vh;
     margin-left: 2vh;
     padding: 1vh;
+    line-height: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+}
+
+.user-profile button {
+    cursor: pointer;
 }

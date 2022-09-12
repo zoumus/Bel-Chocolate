@@ -48,12 +48,13 @@ const ProductShow = () => {
                             </div>
                     </div>
                     <button id="show-add-button">Add to cart</button>
+                    <h1 className="desc-show">Description:</h1>
                     <div id="show-description">{product.description}</div>
             </div>    
         </div>
 
+        {/* <button onClick={()=>setShowModal(true)}>Write a Review</button> */}
         <ReviewIndex />
-        <ReviewFormModal />
         </>
     )
 }

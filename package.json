@@ -22,5 +22,9 @@
   "engines": {
     "node": "16.x"
   },
-  "homepage": "https://github.com/zoumus/Belaid-Chocolate#readme"
+  "homepage": "https://github.com/zoumus/Belaid-Chocolate#readme",
+  "dependencies": {
+    "react-icon": "^1.0.0",
+    "react-icons": "^4.4.0"
+  }
 }

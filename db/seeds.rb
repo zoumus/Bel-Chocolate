@@ -12,12 +12,17 @@ ApplicationRecord.transaction do
     User.destroy_all
     Product.destroy_all
     Category.destroy_all
+    Review.destroy_all
+
   
     puts "Resetting primary keys..."
     # For easy testing, so that after seeding, the first `User` has `id` of 1
     ApplicationRecord.connection.reset_pk_sequence!('users')
     ApplicationRecord.connection.reset_pk_sequence!('products')
     ApplicationRecord.connection.reset_pk_sequence!('categories')
+    ApplicationRecord.connection.reset_pk_sequence!('reviews')
+
+
 
   
     puts "Creating users..."
@@ -67,7 +72,7 @@ ApplicationRecord.transaction do
         password: '123456'
       }) 
     end
-    puts "Done!"
+    
 
     c1 = Category.create!(
       name: "All Product",
@@ -169,7 +174,7 @@ ApplicationRecord.transaction do
       category_id: 5
     )
     file9 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/p9.jpeg')
-    p9.picture.attach(io: file9, filename: 'p8.jpeg')
+    p9.picture.attach(io: file9, filename: 'p9.jpeg')
 
     p10 = Product.create!(
       name: 'Vegan Dark Chocolate Truffles: 9 pieces',
@@ -224,4 +229,151 @@ ApplicationRecord.transaction do
     )
     file15 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/Rosebud_Art_Print_600x.jpeg')
     p15.picture.attach(io: file15, filename: 'Rosebud_Art_Print_600x.jpeg')
+
+
+    r1 = Review.create!(
+      rating: 4,
+      title: 'Chocolate Heaven',
+      body: 'Was excited to find them available is bulk through belChocolate website. They are fresh and delicious. Will definetly keep buying them while available.',
+      user_id: 1,
+      product_id: 3
+    )
+
+    r2 = Review.create!(
+      rating: 5,
+      title: 'the best ever',
+      body: 'Delicious. Dreamy. Will be continuing my supply of these sweet treats.',
+      user_id: 1,
+      product_id: 5
+    )
+
+    r3 = Review.create!(
+      rating: 5,
+      title: 'Great For A Family Gathering!',
+      body: 'I purchased this for a family gathering. It was fun to see family members of all ages light up as they looked for their favorite candies. Excellent quality, great presentation!.',
+      user_id: 3,
+      product_id: 11
+    )
+
+    r4 = Review.create!(
+      rating: 1,
+      title: 'Gold Elegance',
+      body: 'Very disappointed. Too many nuts - not enough of the filled chocolates.',
+      user_id: 4,
+      product_id: 14
+    )
+
+    r5 = Review.create!(
+      rating: 1,
+      title: 'SAD Chocolate & Customer Service',
+      body: 'When we received, the chocolate was tossed about and broken up. It was also discolored around the edges of several pieces. (White color)
+      I emailed twice with no response.',
+      user_id: 7,
+      product_id: 6
+    )
+
+    r6 = Review.create!(
+      rating: 2,
+      title: 'Unhappy Customer',
+      body: "did't like it at all.",
+      user_id: 15,
+      product_id: 1
+    )
+
+    r7 = Review.create!(
+      rating: 5,
+      title: 'My New Favorite!',
+      body: "Even though I am not a fan of truffles with different color. This one was amazing.",
+      user_id: 1,
+      product_id: 2
+    )
+
+    r8 = Review.create!(
+      rating: 2,
+      title: 'Always A Favorite!',
+      body: "Seriously, It's been a family Favorite, MY fave since forever!.",
+      user_id: 11,
+      product_id: 5
+    )
+
+    r9 = Review.create!(
+      rating: 5,
+      title: 'Must Try',
+      body: "BelChocolate has been our family favorite for decades. If there is one candy in the entire world that would devastate me to never have again, it would be this one!.",
+      user_id: 20,
+      product_id: 7
+    )
+
+    r10 = Review.create!(
+      rating: 5,
+      title: 'Possibly The Best Chocolate Ever',
+      body: "BelChocolate are the best chocolates that you can buy. Period. Of the many great flavors.",
+      user_id: 17,
+      product_id: 11
+    )
+
+    r11 = Review.create!(
+      rating: 5,
+      title: 'Best Snack Item',
+      body: 'They are the best item to put in my desk and snack on throughout the day.',
+      user_id: 2,
+      product_id: 2
+    )
+    r12 = Review.create!(
+      rating: 4,
+      title: 'Amazing',
+      body: "I received a bag from my lawyer when I was on my way to work overnight. They are fabulous. they are light and airy and smooth. I may replace my coffee habit with these chocolate covered beans. I've even turned my coworkers on to them. everyone loves them!",
+      user_id: 13,
+      product_id: 7
+    )
+
+    r13 = Review.create!(
+      rating: 2,
+      title: 'Delicious But..',
+      body: "The taste is pratty bad",
+      user_id: 3,
+      product_id: 8
+    )
+
+    r14 = Review.create!(
+      rating: 2,
+      title: 'Never again',
+      body: "did,'t like it at all.",
+      user_id: 15,
+      product_id: 6
+    )
+
+    r15 = Review.create!(
+      rating: 2,
+      title: 'Getting Too Expensive',
+      body: "The chocolate is too tiny.",
+      user_id: 13,
+      product_id: 1
+    )
+
+    r16 = Review.create!(
+      rating: 4,
+      title: 'My New Favorite!',
+      body: "Love this newest variety pack! It quickly became my very favorite combination of all time. Please make it a permanent offering!",
+      user_id: 1,
+      product_id: 6
+    )
+
+    r17 = Review.create!(
+      rating: 3,
+      title: 'Recipe Changed',
+      body: "I have ordered many different combinations. however this is not recommended",
+      user_id: 3,
+      product_id: 4
+    )
+
+    r18 = Review.create!(
+      rating: 5,
+      title: 'the best ever',
+      body: 'Delicious. Dreamy. Will be continuing my supply of these sweet treats.',
+      user_id: 1,
+      product_id: 1
+    ) 
+
+    puts "Done!"
 end
