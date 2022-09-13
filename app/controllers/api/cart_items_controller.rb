@@ -2,9 +2,6 @@ class Api::CartItemsController < ApplicationController
 
     before_action :require_logged_in
 
-    
-
-
     def create 
         @cart_item = CartItem.create(cart_params)
         if @cart_item.save

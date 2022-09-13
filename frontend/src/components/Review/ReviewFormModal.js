@@ -25,15 +25,43 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
     const [title,setTitle] = useState(selectedReview.title)
     const [body,setBody] = useState(selectedReview.body)
     const [rating,setRating] = useState(selectedReview.rating)
+    const [hover, setHover] = useState(null);
+
+    const [validationErrors, setValidationErrors] = useState([])
+
+    const validate = () => {
+        let errors = [];
+        if (!title) {
+            errors.push("Title can't be blunk")
+        }
+        if (!rating) {
+            errors.push("Rating must be uncluded")
+        }
+        if (!body) {
+            errors.push("Body can't be blunk")
+        }
+        return errors;
+    }
 
     const handleSubmit = (e) => {   
         e.preventDefault();
+        let errors = validate();
+        if(errors.length > 0) {
+            setValidationErrors(errors);
+        }        
+        console.log(rating);
+        console.log(title);
+        console.log(body);
+
         if (editReview){
             dispatch(updateReview({title,body,rating,product_id:productId,id:selectedReview.id}))
         }else{
             dispatch(createReview({title,body,rating,product_id:productId}))
         }
-        setShowModal(false)
+            setTitle('')
+            setBody('')
+            setRating(0)
+            setShowModal(false)
     }
 
     return(
@@ -41,9 +69,14 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
             <div onClick={()=>setShowModal(false)} className="bg-modal">
             </div>
 
+
+                {validationErrors.length > 0 &&
+                validationErrors.map(error => <li>{error}</li>)}
+
                 <div className='review-modal'>
                     <form onSubmit={handleSubmit} className="modal-form">
-                    <label className="rating-form">Overall Rating
+                    <div className='star-header'>
+                    <div className="rating-form"><span className="modal-headers">Overall Rating</span></div>
                     <div>
                     {[...Array(5)].map((star, i) => {
                     const ratingValue = i + 1;
@@ -54,29 +87,37 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
                                 name="rating"
                                 value = {ratingValue}
                                 onClick={(e)=> setRating(e.target.value)} 
+
                                 />
 
                             <FaStar  
                                 className = "star" 
-                                color={ratingValue <= (rating) ? "#ffc107" : "#e425e9"} 
-                                size={40} />
-                        
+                                color={ratingValue <= (hover || rating) ? "black" : "rgb(213, 209, 209)"} 
+                                size={30}
+                                onMouseEnter={(e)=> setHover(ratingValue)}
+                                onMouseLeave={()=> setHover(null)} />
                              </label>
                             )
                             })}
-                            
                             </div>
-                        </label>
-                        <label className="title-form">Review Title
+                            </div>
+                            <br/>
+                        <label><span className='modal-headers'>Review Title</span>
+                        <br/>
                             <input 
+                                className="title-form"
                                 type="text"
                                 value={title}
                                 onChange={(e) => setTitle(e.target.value)}
                                 required
                                 />
                         </label>
-                        <label className="body-form">Review
-                            <textarea
+                        <br/>
+                        <br/>
+                        <label><span className='modal-headers'>Review</span>
+                            <br/>
+                            <textarea 
+                                className="body-form"
                                 rows="5" 
                                 cols="40"
                                 type="text"
@@ -85,8 +126,9 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
                                 required
                                 />
                         </label>
+                        <br/>
                         
-                        <button type="submit" >Submit Review</button>
+                        <button type="submit"  className="modal-button">Submit Review</button>
                  </form>
             </div>
          </>

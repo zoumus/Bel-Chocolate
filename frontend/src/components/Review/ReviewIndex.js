@@ -80,7 +80,14 @@ const ReviewIndex  = () => {
 
     return(                                                                                                                                              
         <div>
-        <button onClick={()=>setShowModal(true)}>Write a Review</button>
+            <div className="whrite-reviews">
+                <div className="review-reviews"> Reviews</div>
+                <button onClick={()=>{ 
+                                setSelectedReview(null)
+                                setShowModal(true)
+                                }} className="write-a-review">Write a Review</button>
+            </div>
+        
 
             {reviews.map(review=> (
                 <div className="reviews-info">
