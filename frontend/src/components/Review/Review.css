@@ -1,12 +1,11 @@
-
-
 .bg-modal{
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
+    
 }
 
 .review-modal {
@@ -129,11 +128,12 @@ input[type="radio"] {
     justify-content: center; 
     align-items: center;
 }
-/* .write-review {
+.whrite-reviews {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: center;
-} */
+    /* margin-bottom: 1vh; */
+}
 
 input[type=text]:focus {
     border: 1.5px solid blue;

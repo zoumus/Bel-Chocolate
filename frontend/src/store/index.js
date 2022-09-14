@@ -5,6 +5,7 @@ import user from './user'
 import productsReducer from './product'
 import categoriesReducer from './category';
 import reviewsReducer from './review';
+import cartItemsReducer from './cart';
 
 
 const rootReducer = combineReducers({
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
     user,
     products: productsReducer,
     categories: categoriesReducer,
-    reviews: reviewsReducer
+    reviews: reviewsReducer,
+    cartItems: cartItemsReducer
 });
 let enhancer;
 

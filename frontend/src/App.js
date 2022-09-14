@@ -8,9 +8,9 @@ import ProfileButton from './components/Navigation/ProfileButton';
 import ProductIndex from "./components/ProductPage/ProductIndex";
 import ProductShow from "./components/ProductPage/ProductShow";
 import AboutPage from './components/AboutPage/AboutPage.js';
-// import CategoryIndex from './components/CategoryPage/CategoryIndex.js'
 import NavBar from './components/NavBar/NavBar';
 import CategoryIndex from './components/CategoryPage/CategoryIndex';
+import CartItemIndex from './components/CartItem/CartItemIndex';
 
 function App() {
   return (
@@ -41,6 +41,9 @@ function App() {
         </Route> 
         <Route exact path="/about">
           <AboutPage/>
+        </Route>
+        <Route exact path="/cart">
+          <CartItemIndex/>
         </Route>
       </Switch>
     </>

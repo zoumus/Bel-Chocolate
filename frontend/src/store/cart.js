@@ -9,27 +9,37 @@ export const receiveCartItems = payload => ({ //index
     payload
 })
 export const receiveCartItem = payload => ({// create & update
-    type: RECEIVE_CART_ITEMS,
+    type: RECEIVE_CART_ITEM,
     payload
 })
 export const removeCartItem = cartItemId => ({// delete
-    type: RECEIVE_CART_ITEM,
+    type: REMOVE_CART_ITEM,
     cartItemId
 })
 
-export const getcartItems = state => {
-    return state?.cartItems ? Object.values(state.cartitems) : [];
+export const getCartItems = state => {
+    return state?.cartItems ? Object.values(state.cartItems) : [];
+}
+export const getCartItem = productId => state => {
+    if (!state) {
+        return null
+    } else if (!state.cartItems) {
+        return null
+    } else {
+        return Object.values(state.cartItems).find(item => item.productId == productId);
+    }
 }
 
-export const fetchUserItems = (userId) => async(dispatch) => {
-    const response = await csrfFetch(`/api/users/${userId}`)
+
+export const fetchUserItems = () => async(dispatch) => {
+    const response = await csrfFetch('/api/cart_items/');
     const data = await response.json();
-    dispatch(receiveCartItems(user.cartItems));
+    dispatch(receiveCartItems(data));
 }
-export const createCartItem = (cartItem) => async dispatch => {
+export const createCartItem = (item) => async dispatch => {
     const response = await csrfFetch('/api/cart_items',{
         method: 'POST',
-        body: JSON.stringify(cartItem)
+        body: JSON.stringify({cartItem: item})
     })
     if(response.ok) {
         const data = await response.json();
@@ -39,8 +49,8 @@ export const createCartItem = (cartItem) => async dispatch => {
 
 export const updateCartItem = (cartItem) => async dispatch => {
     const response = await csrfFetch(`/api/cart_items/${cartItem.id}`, {
-        method: 'Patch',
-        body: 'JSON.stringIfy'(cartItem)
+        method: 'PATCH',
+        body: JSON.stringify(cartItem)
     })
     if (response.ok) {
         const data = await response.json();
@@ -49,13 +59,13 @@ export const updateCartItem = (cartItem) => async dispatch => {
     }
 }
 
-export const deleteReview = (reviewId) => async dispatch => {
-    const response = await csrfFetch(`/api/reviews/${reviewId}`, {
+export const deleteCartItem = (cartItemId) => async dispatch => {
+    const response = await csrfFetch(`/api/cart_items/${cartItemId}`, {
         method: 'DELETE'
     })
 
     if (response.ok) {
-        dispatch(removeCartItem(reviewId))
+        dispatch(removeCartItem(cartItemId))
     }
 }
 

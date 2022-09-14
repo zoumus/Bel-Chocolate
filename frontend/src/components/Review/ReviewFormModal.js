@@ -32,13 +32,13 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
     const validate = () => {
         let errors = [];
         if (!title) {
-            errors.push("Title can't be blunk")
+            errors.push("Title can't be blank")
         }
         if (!rating) {
-            errors.push("Rating must be uncluded")
+            errors.push("Rating must be included")
         }
         if (!body) {
-            errors.push("Body can't be blunk")
+            errors.push("Body can't be blank")
         }
         return errors;
     }

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       resources :products, only: [:index]
     end
     resources :cart_items, only: [:index, :create, :update, :destroy]
+    
     get '/products/:category_id/category', to: "products#index"
   end
   get '*path', to: "static_pages#frontend_index"

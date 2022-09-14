@@ -1,0 +1,15 @@
+.empty-cart {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.empty-cart-message {
+    padding: 1vw;
+}
+.empty-cart-link {
+    cursor: pointer;
+    /* color: black; */
+}

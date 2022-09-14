@@ -6,6 +6,7 @@ import './Review.css'
 import ReviewFormModal from './ReviewFormModal'
 import { deleteReview } from "../../store/review";
 import { FaStar } from 'react-icons/fa';
+import { formatDateTime } from "../../util/dateUtil"; 
 
 
 const ReviewIndex  = () => {
@@ -93,7 +94,7 @@ const ReviewIndex  = () => {
                 <div className="reviews-info">
                     <div className="review-name-date">
                         <div className="review-firstname">{review.userName}</div>
-                        <div className="review-date">DATE</div>
+                        <div className="review-date">{formatDateTime(review.updatedAt)}</div>
 
                         {currentUserId === review.userId && (
                         <>
