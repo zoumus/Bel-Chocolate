@@ -47,3 +47,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+*:focus {
+	/* outline:none; */
+	outline-color: black;
+	/* outline-width:2px; */
+	/* outline-style: inset */
+}
+

@@ -32,7 +32,6 @@
 }
 input[type=text]:focus {
     border: 1px solid rgb(17, 16, 16);
-    outline: none;
 }
 input[type=password]:focus {
     border: 1px solid rgb(17, 16, 16);
@@ -43,15 +42,20 @@ input[type=text] {
     outline: none;
 }
 input[type=password] {
-    border: 1px solid rgb(234, 226, 226);
+    border: 1px solid rgb(199, 187, 187);
     outline: none;
 }
+textarea:focus {
+    border: 1px solid rgb(17, 16, 16);
+}
+textarea {
+    border: 1px solid rgb(199, 187, 187);
+}
 button {
-    background-color: rgb(64, 61, 61);
+    background-color: rgb(9, 8, 8);
     color: white;
     border: none;
     font-size: 17px;
-    // margin-top:2vh;
 }
 #bottomForm {
     display: flex;

@@ -22,7 +22,6 @@ const CartListings = ({cartItem}) => {
     },[deleted])
 
     const handleUpdate = () => {
-        // const userId = JSON.parse(user).id;
         const upCartItem = {
             ...cartItem,
             quantity: count
@@ -51,7 +50,6 @@ const CartListings = ({cartItem}) => {
     }
 
     const handleInput = () => {
-        // debugger;
         let input = parseInt(document.getElementById("show-input").value);
         console.log(input + 1)
         if (input > 0) {
@@ -59,38 +57,26 @@ const CartListings = ({cartItem}) => {
         } else {
             setCount("")
         }
-        // const userId = JSON.parse(user).id;
-        // const upCartItem = {
-        //     cartItem: {
-        //         id: id,
-        //         quantity: count,
-        //         productId: productId,
-        //         userId: userId
-        //     }
-        // }
-        // return dispatch(updateCartItem(upCartItem))
     }
-
-
-    // const handleIncrement = async () => {
-    //     setCount(count + 1);
-    // }
-
-
     return (
         <>
             <div id="cart-listing-wrapper">
+                <div className="picture-text">
                 <img id="cart-listing-img" src={product.pictureUrl} alt="product"/>
                 <div id="listing-text">
-                    <div id="listing-name" className='listing-details'>{product.name}</div>
-                    <div id="listing-price" className='listing-details'>${(Math.round((product.price) * 100) / 100).toFixed(2)}</div>
+                    <div className="listing-name" >{product.name}</div>
+                    <div className="listing-price" >${(Math.round((product.price) * 100) / 100).toFixed(2)}</div>
                 </div>
+                </div>
+                
                 <div className="cart-counter-delete">
-                    <div className="show-quantity">
-                        <button id='plus-button' onClick={e => setCount(count+1)}>+</button>
-                        <input type="text" id="show-input" value={count} onChange={e => setCount(e.target.value)}></input>
-                        <button id='minus-button' onClick={() => ((count -1) > 0 ? setCount(count - 1) : setCount(1))}>-</button>
-
+                    <div className="showshow-quantity">
+                        <div className=" button-counter">
+                            <button classname='plus-button-cart' onClick={e => setCount(count+1)}>+</button>
+                            <input type="text" classname="show-input-cart" value={count} onChange={e => setCount(e.target.value)}></input>
+                            <button className='minus-button-cart' onClick={() => ((count -1) > 0 ? setCount(count - 1) : setCount(1))}>-</button>
+                        </div>
+                    
                         <button className='cart-remove' onClick={handleDelete}>Remove</button>
                     </div>
                     <div className="cart_item_total">

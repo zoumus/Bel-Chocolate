@@ -14,17 +14,17 @@ const CartItemIndex = () => {
     const history = useHistory();
 
     useEffect(() => {
-        dispatch(fetchUserItems())
-        // dispatch(fetchProducts()) 
+        dispatch(fetchUserItems()) 
     }, [])
 
-    // useEffect(() => {
-    //     dispatch(fetchUserItems())
-    //     dispatch(fetchProducts()) 
-    // },[user])
+    const deleteCart = () => {
+        return cartItems.map(cartItem => (
+            dispatch(deleteCartItem(cartItem.id))
+        ))
+    }
     const handleCheckout = (e) => {
         e.preventDefault();
-        // deleteCart();
+        deleteCart();
         history.push("/account");
     }
 
@@ -49,10 +49,13 @@ const CartItemIndex = () => {
 
     } else {
         return (
-            <div className='cart-container'>
-                <div classname="cart-first">
-                 <h1>Cart</h1>
+            <>
+            
+            <div classname="cart-first">
+                 <h1 className="cart-first-h1">Cart</h1>
                 </div>
+            <div id="cart-page">
+            <div className='cart-container'>
                  <div className="cart-second">
                     <div className="cart-product"><h1>Product</h1></div>
                     <div className="quantity-total">
@@ -65,11 +68,21 @@ const CartItemIndex = () => {
                         <CartListings key={cartItem.id} cartItem={cartItem}/>
                 ))}
                 </div>
+                <div className="cart-last">
+                <div className="gift">
+                        <h1 className="gift-header">🎁 Add a Gift Note 🎁</h1>
+                        <h1 className="gift-text">Tip: emoji and special characters aren't supported, remember to include who the order is from!</h1>
+                </div>
+                <div className="total-price">
+                    <h1 className="total-total">total: ${calcTotal()}</h1> 
+                    <h1 className="checkout-checkout">Shipping calculated at checkout.</h1>
+                    {(user && cartItems.length > 0) ? <button id="checkout-button" onClick={handleCheckout}>Checkout</button> : null}
+                </div>
+                </div>
                 
-                <h1>total: {calcTotal()}</h1> 
-                <h1>Shipping calculated at checkout.</h1>
-                {(user && cartItems.length > 0) ? <button id="checkout-button" onClick={handleCheckout}>Checkout</button> : null}
             </div>
+            </div>
+            </>
         )
     }
 }

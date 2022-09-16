@@ -11,6 +11,8 @@ import AboutPage from './components/AboutPage/AboutPage.js';
 import NavBar from './components/NavBar/NavBar';
 import CategoryIndex from './components/CategoryPage/CategoryIndex';
 import CartItemIndex from './components/CartItem/CartItemIndex';
+import Footer from './components/Footer/Footer.js';
+import GetProductSearch from './components/SearchBar/GetProductSearch';
 
 function App() {
   return (
@@ -44,6 +46,9 @@ function App() {
         </Route>
         <Route exact path="/cart">
           <CartItemIndex/>
+        </Route>
+        <Route exact path="/result">
+          <GetProductSearch/>
         </Route>
       </Switch>
     </>

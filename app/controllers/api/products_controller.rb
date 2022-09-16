@@ -1,8 +1,9 @@
 class Api::ProductsController < ApplicationController
     wrap_parameters include: Product.attribute_names + [:picture], format: :multipart_form
 
+    
+
     def index
-        
         if params[:category_id]
             @products = Product.where(category_id: params[:category_id])
             render :index
@@ -10,6 +11,12 @@ class Api::ProductsController < ApplicationController
             @products = Product.all
             render :index
         end
+    end
+
+    def search
+        query = params[:query]
+        @products = Product.where('name ILIKE ? OR description ILIKE ?',  "%#{query}%", "%#{query}%")
+        render :index
     end
 
     def show

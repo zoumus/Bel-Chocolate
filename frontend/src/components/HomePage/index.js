@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
 import splashPicture from '../../assets/SplashPicture/imageSplash.jpeg';
+import Footer from "../Footer/Footer.js";
 
 function HomePage() {
     return(
@@ -15,8 +16,8 @@ function HomePage() {
                 <div className="splash-image">
                 <img src={ splashPicture } alt="yummy chocolate" ></img>
                 </div>
-                
             </div>
+            <Footer/>
         </>
     )
 }

@@ -4,3 +4,10 @@
     margin-top: 10vh;
     width: 80vh
 }
+.about-header {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5vh;
+    font-size: 4vh;
+    font-weight: bold;
+}

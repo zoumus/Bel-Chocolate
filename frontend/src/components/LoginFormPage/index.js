@@ -44,7 +44,7 @@ function LoginFormPage() {
           <h1>Login</h1>
           <p>Please enter your e-mail and password:</p>
         </div>
-        <ul>
+        <ul className="errors">
           {errors.map(error => <li key={error}>{error}</li>)}
         </ul>
         

@@ -44,7 +44,7 @@ function SignupFormPage() {
             <h1>Register</h1>
             <p>Please fill in the information below:</p>
           </div>
-      <ul>
+      <ul className="errors">
         {errors.map(error => <li key={error}>{error}</li>)}
       </ul>
       <label>

@@ -5,7 +5,7 @@
     margin-left: 10vw;
     margin-right: 10vw;
     margin-top: 4.5vh;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
 }
 
 #show-text-container {
@@ -19,7 +19,7 @@
 #show-picture img {
     height: 70vh;
     width: 40vw;
-    border-bottom: solid 1px;
+    border-bottom: solid 3px;
 }
 
 #show-name {
@@ -58,7 +58,7 @@
     padding-top: 1vh;
     padding-bottom: 1vh;
 }
-#minus-button #plus-button {
+.minus-button .plus-button {
     height: 100%;
 }
 

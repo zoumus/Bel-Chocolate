@@ -13,6 +13,7 @@ ApplicationRecord.transaction do
     Product.destroy_all
     Category.destroy_all
     Review.destroy_all
+    CartItem.destroy_all
 
   
     puts "Resetting primary keys..."
@@ -21,10 +22,8 @@ ApplicationRecord.transaction do
     ApplicationRecord.connection.reset_pk_sequence!('products')
     ApplicationRecord.connection.reset_pk_sequence!('categories')
     ApplicationRecord.connection.reset_pk_sequence!('reviews')
+    ApplicationRecord.connection.reset_pk_sequence!('cart_items')
 
-
-
-  
     puts "Creating users..."
 
     # Create one user with an easy to remember username, email, and password:
@@ -374,6 +373,12 @@ ApplicationRecord.transaction do
       user_id: 1,
       product_id: 1
     ) 
+
+    c1 = CartItem.create!(
+      quantity: 1,
+      user_id: 2,
+      product_id: 1,
+    )
 
     puts "Done!"
 end

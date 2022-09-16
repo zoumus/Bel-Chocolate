@@ -15,7 +15,7 @@ class Review < ApplicationRecord
     validates :rating, :title, presence: true
     validates :rating, inclusion: { in: 1..5 }
     validates :body, length: {minimum: 4}
-    validates :user_id, uniqueness: {scope: :product_id}
+    # validates :user_id, uniqueness: {scope: :product_id}
       #validates a unique pairing between user_id and product_id to ensure 1 user
       #can only create a review for that product
 

@@ -27,6 +27,19 @@ export const getProducts = state => {
     return Object.values(state.products)
 }
 
+// SearchBar
+export const getSearchedProducts = (query) => async dispatch => {
+    const res = await csrfFetch(`/api/products/search/${query}`)
+    if (res.status >= 400) throw res;
+
+    if (res.ok) {
+        const data = await res.json();
+        console.log('it worked');
+        dispatch(receiveProducts(data));
+    }
+}
+//SearchBar
+
 export const fetchProducts = ()=> async(dispatch) => {
     const res = await csrfFetch('/api/products')
     const products = await res.json()
@@ -57,7 +70,7 @@ const productsReducer = (state={},action) => {
     const newState = {...state} 
     switch(action.type){
         case RECEIVE_PRODUCTS:
-            return action.payload.products
+            return action.payload.products ? action.payload.products : {};
         case RECEIVE_PRODUCT:
             newState[action.payload.product.id] = action.payload.product;
             return newState;

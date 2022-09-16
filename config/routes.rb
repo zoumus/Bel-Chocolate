@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     resources :cart_items, only: [:index, :create, :update, :destroy]
     
     get '/products/:category_id/category', to: "products#index"
+    get '/products/search/:query', to:"products#search"
+    delete '/products/allProduct', to:"cart_items#destroy_all"
   end
   get '*path', to: "static_pages#frontend_index"
 end

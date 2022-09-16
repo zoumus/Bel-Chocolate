@@ -1,15 +1,16 @@
 import './Review.css'
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams, useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { createReview,updateReview } from '../../store/review';
-// import StarRating from './StarRating';
 import { FaStar } from 'react-icons/fa';
 
 const ReviewFormModal = ({setShowModal,selectedReview}) => {
 
+    const user = useSelector(state => state.session.user)
     const {productId} = useParams();
+    const history = useHistory();
     let editReview = true;
 
     if (!selectedReview){
@@ -45,9 +46,13 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
 
     const handleSubmit = (e) => {   
         e.preventDefault();
+        if(!user) history.push('/login');
+        console.log(user)
         let errors = validate();
+
         if(errors.length > 0) {
             setValidationErrors(errors);
+            return;
         }        
         console.log(rating);
         console.log(title);
@@ -58,22 +63,23 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
         }else{
             dispatch(createReview({title,body,rating,product_id:productId}))
         }
+        if (errors.length === 0) {
             setTitle('')
             setBody('')
             setRating(0)
             setShowModal(false)
+        }      
     }
-
     return(
         <>
             <div onClick={()=>setShowModal(false)} className="bg-modal">
             </div>
 
 
-                {validationErrors.length > 0 &&
-                validationErrors.map(error => <li>{error}</li>)}
+                
 
                 <div className='review-modal'>
+                    
                     <form onSubmit={handleSubmit} className="modal-form">
                     <div className='star-header'>
                     <div className="rating-form"><span className="modal-headers">Overall Rating</span></div>
@@ -92,7 +98,7 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
 
                             <FaStar  
                                 className = "star" 
-                                color={ratingValue <= (hover || rating) ? "black" : "rgb(213, 209, 209)"} 
+                                color={ratingValue <= (hover || rating) ? "#ab5b0e" : "rgb(213, 209, 209)"} 
                                 size={30}
                                 onMouseEnter={(e)=> setHover(ratingValue)}
                                 onMouseLeave={()=> setHover(null)} />
@@ -109,7 +115,7 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
                                 type="text"
                                 value={title}
                                 onChange={(e) => setTitle(e.target.value)}
-                                required
+                                // required
                                 />
                         </label>
                         <br/>
@@ -123,11 +129,13 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
                                 type="text"
                                 value={body}
                                 onChange={(e) => setBody(e.target.value)}
-                                required
+                                // required
                                 />
                         </label>
                         <br/>
-                        
+                        <div className="errors">{validationErrors.map((error, i) => {
+                        return <li key={i}>{error}</li>
+                    })}</div>
                         <button type="submit"  className="modal-button">Submit Review</button>
                  </form>
             </div>
