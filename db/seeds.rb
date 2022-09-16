@@ -99,7 +99,7 @@ ApplicationRecord.transaction do
       price: 14.00,
       category_id: 2
     )
-    file1 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/p1.jpeg')
+    file1 = open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/p1.jpeg')
     p1.picture.attach(io: file1, filename: 'p1.jpeg')
 
     p2 = Product.create!(
