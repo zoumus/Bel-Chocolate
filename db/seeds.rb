@@ -375,9 +375,14 @@ ApplicationRecord.transaction do
     ) 
 
     c1 = CartItem.create!(
-      quantity: 1,
+      quantity: 2,
       user_id: 2,
       product_id: 1,
+    )
+    c1 = CartItem.create!(
+      quantity: 4,
+      user_id: 2,
+      product_id: 2,
     )
 
     puts "Done!"
