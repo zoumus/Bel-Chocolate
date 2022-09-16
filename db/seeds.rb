@@ -123,7 +123,7 @@ ApplicationRecord.transaction do
     p4 = Product.create!(
       name: 'Dark Chocolate Truffles: 6 pieces',
       description: 'This is a mouth-melting gourmet chocolate box for curious food lovers.',
-      price: 519.00,
+      price: 19.00,
       category_id: 1
     )
     file4 = URI.open('https://bel-chocolate-seeds.s3.us-west-1.amazonaws.com/p4.jpeg')
@@ -376,14 +376,215 @@ ApplicationRecord.transaction do
 
     c1 = CartItem.create!(
       quantity: 2,
-      user_id: 2,
+      user_id: 1,
       product_id: 1,
     )
     c1 = CartItem.create!(
       quantity: 4,
-      user_id: 2,
+      user_id: 1,
       product_id: 2,
     )
+    c2 = CartItem.create!(
+      quantity: 2,
+      user_id: 2,
+      product_id: 3,
+    )
+    c2 = CartItem.create!(
+      quantity: 4,
+      user_id: 2,
+      product_id: 4,
+    )
+    c3 = CartItem.create!(
+      quantity: 2,
+      user_id: 3,
+      product_id: 5,
+    )
+    c3 = CartItem.create!(
+      quantity: 4,
+      user_id: 3,
+      product_id: 6,
+    )
 
+    c4 = CartItem.create!(
+      quantity: 2,
+      user_id: 4,
+      product_id: 7,
+    )
+    c4 = CartItem.create!(
+      quantity: 4,
+      user_id: 4,
+      product_id: 8,
+    )
+    c5 = CartItem.create!(
+      quantity: 2,
+      user_id: 5,
+      product_id: 9,
+    )
+    c5 = CartItem.create!(
+      quantity: 4,
+      user_id: 5,
+      product_id: 10,
+    )
+    c6 = CartItem.create!(
+      quantity: 2,
+      user_id: 6,
+      product_id: 11,
+    )
+    c6 = CartItem.create!(
+      quantity: 4,
+      user_id: 6,
+      product_id: 12,
+    )
+    c16 = CartItem.create!(
+      quantity: 2,
+      user_id: 6,
+      product_id: 13,
+    )
+    c6 = CartItem.create!(
+      quantity: 4,
+      user_id: 6,
+      product_id: 14,
+    )
+    c7 = CartItem.create!(
+      quantity: 2,
+      user_id: 7,
+      product_id: 15,
+    )
+    c7 = CartItem.create!(
+      quantity: 4,
+      user_id: 7,
+      product_id: 1,
+    )
+    c8 = CartItem.create!(
+      quantity: 2,
+      user_id: 8,
+      product_id: 2,
+    )
+    c8 = CartItem.create!(
+      quantity: 4,
+      user_id: 8,
+      product_id: 3,
+    )
+    c9 = CartItem.create!(
+      quantity: 2,
+      user_id: 9,
+      product_id: 1,
+    )
+    c9 = CartItem.create!(
+      quantity: 4,
+      user_id: 9,
+      product_id: 2,
+    )
+    c10 = CartItem.create!(
+      quantity: 2,
+      user_id: 10,
+      product_id: 3,
+    )
+    c10 = CartItem.create!(
+      quantity: 4,
+      user_id: 10,
+      product_id: 4,
+    )
+
+    c11 = CartItem.create!(
+      quantity: 2,
+      user_id: 11,
+      product_id: 5,
+    )
+    c11 = CartItem.create!(
+      quantity: 4,
+      user_id: 11,
+      product_id: 6,
+    )
+    c12 = CartItem.create!(
+      quantity: 2,
+      user_id: 12,
+      product_id: 7,
+    )
+    c12 = CartItem.create!(
+      quantity: 4,
+      user_id: 12,
+      product_id: 8,
+    )
+    c13 = CartItem.create!(
+      quantity: 2,
+      user_id: 13,
+      product_id: 9,
+    )
+    c13 = CartItem.create!(
+      quantity: 4,
+      user_id: 13,
+      product_id: 10,
+    )
+    c14 = CartItem.create!(
+      quantity: 2,
+      user_id: 14,
+      product_id: 11,
+    )
+    c14 = CartItem.create!(
+      quantity: 4,
+      user_id: 14,
+      product_id: 12,
+    )
+    c15 = CartItem.create!(
+      quantity: 2,
+      user_id: 15,
+      product_id: 13,
+    )
+    c15 = CartItem.create!(
+      quantity: 4,
+      user_id: 15,
+      product_id: 14,
+    )
+    c16= CartItem.create!(
+      quantity: 2,
+      user_id: 16,
+      product_id: 15,
+    )
+    c16 = CartItem.create!(
+      quantity: 4,
+      user_id: 16,
+      product_id: 6,
+    )
+    c17 = CartItem.create!(
+      quantity: 2,
+      user_id: 17,
+      product_id: 13,
+    )
+    c17 = CartItem.create!(
+      quantity: 4,
+      user_id: 17,
+      product_id: 14,
+    )
+    c18 = CartItem.create!(
+      quantity: 2,
+      user_id: 18,
+      product_id: 7,
+    )
+    c18 = CartItem.create!(
+      quantity: 4,
+      user_id: 18,
+      product_id: 4,
+    )
+    c19 = CartItem.create!(
+      quantity: 2,
+      user_id: 19,
+      product_id: 8,
+    )
+    c19 = CartItem.create!(
+      quantity: 4,
+      user_id: 19,
+      product_id: 10,
+    )
+    c20 = CartItem.create!(
+      quantity: 2,
+      user_id: 20,
+      product_id: 15,
+    )
+    c20 = CartItem.create!(
+      quantity: 4,
+      user_id: 20,
+      product_id: 1,
+    )
     puts "Done!"
 end
