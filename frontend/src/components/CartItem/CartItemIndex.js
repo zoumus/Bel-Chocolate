@@ -25,8 +25,16 @@ const CartItemIndex = () => {
     const handleCheckout = (e) => {
         e.preventDefault();
         deleteCart();
+        // handleCheckoutModal();
         history.push("/account");
     }
+
+    // const handleCheckoutModal = () => {
+    //     let modal = document.getElementById("checkout-modal");
+    //     modal.style.display = "block";
+    //     let bg = document.getElementById("checkout-modal-background");
+    //     bg.style.display = "block";
+    // }
 
     const calcTotal = () => {
         return cartItems.reduce((acc, ele) => acc + ele.price*ele.quantity, 0);
@@ -77,6 +85,7 @@ const CartItemIndex = () => {
                     <h1 className="total-total">total: ${calcTotal()}</h1> 
                     <h1 className="checkout-checkout">Shipping calculated at checkout.</h1>
                     {(user && cartItems.length > 0) ? <button id="checkout-button" onClick={handleCheckout}>Checkout</button> : null}
+                    {/* <button id="checkout-button" onClick={handleCheckout}>Checkout</button> */}
                 </div>
                 </div>
                 

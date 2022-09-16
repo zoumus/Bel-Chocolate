@@ -1,8 +1,11 @@
 #about-page {
     margin-left: 30vw;
     margin-right: 30vw;
-    margin-top: 10vh;
-    width: 80vh
+    margin-top: 7vh;
+    width: 70vh;
+    line-height: 2.5vh;
+    /* letter-spacing: .05vw; */
+    color: rgb(71, 62, 62);
 }
 .about-header {
     display: flex;
@@ -10,4 +13,23 @@
     margin-top: 5vh;
     font-size: 4vh;
     font-weight: bold;
+}
+.f-paragraph {
+    font-weight: bold;
+}
+#about-img1 {
+    margin-left: 2.5vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+#hand-chocolate {
+    width: 45%;
+    height: 45%;
+    margin-left: 10vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+a {
+    color: black;
 }

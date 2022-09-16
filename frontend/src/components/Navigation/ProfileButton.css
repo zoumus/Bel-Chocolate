@@ -1,16 +1,35 @@
-
-.user-profile {
+.user-profile-one {
     margin-top: 10vh;
-    margin-left: 2vh;
+    margin-left: 10vh;
     padding: 1vh;
     line-height: 4vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    font-size: 3vh;
+    align-items: normal;
+    width: 60vw;
+    
+}
+.my-account {
+    font-size: 3.2vh;
+    font-weight: bold;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+}
+.add-border {
+    margin-top: 4vh;
+}
+.line-border {
+    border-bottom: 1px solid rgb(238, 230, 230);
+}
+.last-p {
+    margin-top: 2vh
 }
 
-.user-profile button {
+.logout-button {
     cursor: pointer;
+}
+.first-last {
+    margin-left: 1vw;
+    color: #ab5b0e;
 }

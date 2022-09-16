@@ -99,13 +99,19 @@
     color: rgb(139, 134, 134);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.no-products {
+#no-products-icon {
+    display: flex;
     width: 100vw;
     height: 50vh;
-    display: flex;
-    flex-direction: column;
     justify-content:center;
     align-items: center;
+}
+
+.no-products {
     font-size: 3vh;
     font-weight: bold;
+}
+#fa-cry {
+    margin-left: .8vw;
+    transform: scale(1.3);
 }

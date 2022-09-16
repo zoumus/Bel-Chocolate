@@ -21,14 +21,16 @@ function ProfileButton({ user }) {
     return (<Redirect to='/'/>)
   }
   return (
-    <>
-      <div className='user-profile'>
-        <button onClick={ logout }>Logout</button>
-        <h1>My account</h1>
-        <p>Welcome back, {sessionUser.firstName} ! </p>
+    <div className="top-user-profile">
+      <div className='user-profile-one'>
+        <div className="logout-button" onClick={ logout }>Logout</div>
+        <div className="my-account">My account</div>
+        <div>Welcome back, {sessionUser.firstName} ! </div>
+        <div className="add-border">My orders</div>
+        <div className="line-border"></div>
+        <div className='last-p'>You haven't placed any orders yet  <span className="first-last">{sessionUser.firstName} {sessionUser.lastName}</span></div>
       </div>
-        
-    </>
+    </div>
   )
 }
 export default ProfileButton;

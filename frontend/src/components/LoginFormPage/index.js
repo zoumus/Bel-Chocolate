@@ -41,7 +41,7 @@ function LoginFormPage() {
     <div className='loginForm'>
       <form onSubmit={handleSubmit}>
         <div id='textHeader'>
-          <h1>Login</h1>
+          <h1 className="login-logout-header">Login</h1>
           <p>Please enter your e-mail and password:</p>
         </div>
         <ul className="errors">
@@ -70,7 +70,7 @@ function LoginFormPage() {
           </label>
           <button type="submit" className="login-button">Log In</button>
           <div id='bottomForm'>
-            <p>Don't have an account?  <a href='/signup'>Create one</a></p>
+            <p className="create-account">Don't have an account?  <a href='/signup'>Create one</a></p>
   
             <p>or you can use the  <span onClick={handleDemo} className='demoUserButton'>Demo User</span></p>
           </div>

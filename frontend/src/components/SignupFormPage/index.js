@@ -34,14 +34,14 @@ function SignupFormPage() {
         else setErrors([res.statusText]);
       });
     }
-    return setErrors(['Confirm Password field must be the same as the Password field']);
+    return setErrors(['Password must be the same as the Password field']);
   };
 
   return (
     <div className='signup-form'>
         <form onSubmit={handleSubmit}>
           <div className='text-header'>
-            <h1>Register</h1>
+            <h1 className="login-logout-header">Register</h1>
             <p>Please fill in the information below:</p>
           </div>
       <ul className="errors">

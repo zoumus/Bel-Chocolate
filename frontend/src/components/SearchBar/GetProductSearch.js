@@ -1,14 +1,15 @@
 import { useSelector } from "react-redux";
 import ProductIndexItem from "../ProductPage/ProductIndexItem";
+import { FaSadTear } from "react-icons/fa";
 import './SearchBar.css';
 const GetProductSearch = () => {
     let products = useSelector(state => Object.values(state.products));
 
     if(products.length === 0) {
         return (
-            <div>
-                <div className="no-products">No results could be found!</div>
-                {/* <Redirect to="/> */}
+            <div id="no-products-icon">
+                <div className="no-products">Sorry, no results could be found!</div>
+                <div className="fasadtear"><FaSadTear id="fa-cry"/></div>
             </div>
         ) 
     }
