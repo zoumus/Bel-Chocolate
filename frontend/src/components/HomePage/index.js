@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
 import splashPicture from '../../assets/SplashPicture/imageSplash.jpeg';
 import Footer from "../Footer/Footer.js";
+import { fetchUserItems } from "../../store/cart";
+import { useDispatch, useSelector } from "react-redux";
 
 function HomePage() {
+
+    const user = useSelector(state => state.session.user)
+    const dispatch = useDispatch()
+    useEffect(() => {
+        if (user) dispatch(fetchUserItems)
+    },[])
+
     return(
         <>
             <div id="splash-section">
