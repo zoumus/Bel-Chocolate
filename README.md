@@ -4,20 +4,20 @@ With PostgresSQL as a database and Rails as a backend, BelChocolate is able to s
 
 <a href="https://bel-chocolate.herokuapp.com/">BelChocolate Live URL</a>
 
-# Features
-    1. Sign in/ Register
+## Features
+    ### Sign in/ Register
 
 BelChocolate has a fully functional user auth system, with error handling. A user's sign in status will affect what feature they have access to. If the user is not signed in and tries to use a feature that requires log in, the sign in/ register page will appear and prompt them to sign in/ register. Users have the option to use a demo account to navigate the site.
 
-    2. Reviews
+    ### Reviews
 
 On a listing's show page, the user will have the option to leave a review along with a star rating. There is error handling - a review will not be submitted and a message will pop up if the user does not fill in all fields. After posting a review, the user can edit or delete said review by clicking the corresponding buttons. Only reviews made by the current user can be edited and deleted. Only reviews made by the current user can be edited and deleted.
 
-    3. Cart
+    ### Cart
 
 Users can add specified quantities of Products to cart and have access to update or delete a specified item.
 
-    4. Search
+    ### Search
 
 Here users can type in any letter/word, and a list of product including said letter/word in the name will immediately render/modify as the input changes. Each search item listed is a link that will navigate users to the specific product's show page.
 
