@@ -62,10 +62,10 @@ useEffect(() => {
                   <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
                 </div>
                 <div id="cart-link">
-                {!sessionUser ? (<a href="/login"><i className="fa-solid fa-cart-shopping"></i></a>) : (<a href="/cart"><i className="fa-solid fa-cart-shopping"></i></a>)} 
-                <p className="cart-quantity">{cartItemsNum()}</p>
-                  
+                {!sessionUser ? (<a href="/login"><i className="fa-solid fa-cart-shopping"></i></a>) : (<a href="/cart"><i className="fa-solid fa-cart-shopping"></i></a>)}                   
                 </div>
+                <div className="cart-quantity">{cartItemsNum()}</div>
+
                 
         </div>
         {showSearchBar && <SearchBar setSearchBar={setSearchBar}/> }

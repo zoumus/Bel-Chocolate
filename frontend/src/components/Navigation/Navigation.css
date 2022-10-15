@@ -1,73 +1,91 @@
+@font-face {
+    font-family: poppinsReg;
+    src: url(./fonts/apple_garamond/EBGaramond-VariableFont_wght.ttf);
+}
+
 * {
     background-color: #fffde9;
 }
 
 .links-icons{
     display: flex;
-    /* justify-content: space-between; */
     border-bottom: solid 1px;
     height: 12vh;
     z-index: 5;
     align-items: center;
-    
 }
+
 .categories  {
     display: flex;
     justify-content: center;
     color: black;
     align-items: center;
-    /* width: 50% */
     margin-right: 10vw;
 }
+
 .categories a {
     text-decoration: none;
 }
+
 .left {
     margin-top: 1.5vh;
     margin-left: 2%;
     margin-right: 0;
-    /* width: 80%; */
 }
+
 .shop-all {
     width: 100%
 }
+
 .categories div{
-    /* padding: 10%; */
     cursor: pointer;
     width: 5vw;
     font-weight: bold;
+    font-family: poppinsReg;
 }
 
 .categories a {
     color: black;
     width: 50vw;
 }
+
 .middle{
     font-size: 3.5vw;
     display: flex;
     align-items: center;
     font-weight: bold;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: poppinsReg;
     margin-right: 25vw;
     margin-left: 2vh;
 }
+
 .middle a {
     color: black;
     text-decoration: none;
- }
+    margin-left: 4vw;
+    letter-spacing: .2vw;
+}
+
 .right {
     display: flex;
     width: 15vw;
     justify-content: space-evenly;
     align-items: center;
+    margin-left: 3vw;
 }
+
 .right i {
     font-size: 1vw;
     color: black;
 }
+
 #cart-link {
     display: flex;
     justify-content: center;
-    width: min-content;
+}
+
+.cart-quantity {
+    margin-left: -30px;
+    font-size: 1.3vw;
 }
 

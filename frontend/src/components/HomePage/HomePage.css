@@ -18,7 +18,7 @@
 #splash-text {
     display: flex;
     width: 50%;
-    font-family: "Cosmica-Regular";
+    /* font-family: "Cosmica-Regular"; */
     font-size: 16px;
     line-height: 1.5;
     flex-direction: column;
@@ -38,13 +38,13 @@
 .first-text {
     width: 20vw; 
     font-size: 4vh;
-    font-family: "Cosmica-Semibold" !important;
+    font-family: poppinsReg;
     line-height: 46px !important;
     font-weight: bold;
 }
 .second-text {
     width: 20vw; 
-    font-family: "Cosmica-Regular" !important;
+    font-family: poppinsReg;
     line-height: 28px !important;
     margin-top: 16px;
     font-size: 2.2vh;
