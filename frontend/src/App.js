@@ -51,6 +51,7 @@ function App() {
           <GetProductSearch/>
         </Route>
       </Switch>
+      <Footer/>
     </>
   );
 }

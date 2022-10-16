@@ -1,9 +1,9 @@
 .footer-icons {
-    background-color: rgb(15, 70, 15);
+    background-color: rgb(192, 229, 192);
     display: block;
     padding-top: 2.5vh;
     padding-bottom: 2.5vh;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     display: flex;
     align-items: center;
     justify-content: center;

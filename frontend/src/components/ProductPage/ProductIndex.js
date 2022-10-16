@@ -13,15 +13,14 @@ const ProductIndex = () => {
     },[dispatch])
 
     return(
-        <>
+        <div id="product-page">
             <h1 id='product-header'>Products</h1>
             <div id="product-item">
                 {prods.map(product=>(
                 <div id='product-list'><ProductIndexItem key={product.id} product={product} /></div>
             ))}
-            </div>
-            
-        </>
+            </div>  
+        </div>
         
     )
 

@@ -23,11 +23,9 @@ function HomePage() {
                     <div className="splash-link"><Link to="/products">Order Chocolate Online</Link></div>
                 </div>
                 <div className="splash-image">
-                <img src={ splashPicture } alt="yummy chocolate" ></img>
+                    <img src={ splashPicture } alt="yummy chocolate" ></img>
                 </div>
-            </div>
-            <hr></hr>          
-            <Footer/>
+            </div>         
         </>
     )
 }

@@ -13,11 +13,11 @@
 
 .links-icons{
     display: flex;
-    border-bottom: solid 1px;
+    border-bottom: solid 1px rgb(199, 195, 195);
     height: 12vh;
     z-index: 5;
     align-items: center;
-    background-color: rgb(99, 160, 99);
+    background-color: rgb(192, 229, 192);
 }
 
 .categories  {
