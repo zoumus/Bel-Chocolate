@@ -7,17 +7,17 @@
     src: url(./fonts/apple_garamond/SuezOne-Regular.ttf);
 }
 
-* {
+/* * { */
     /* background-color: #fffde9; */
-}
+/* } */
 
-.links-icons{
+#links-icons{
     display: flex;
     border-bottom: solid 1px rgb(199, 195, 195);
     height: 12vh;
     z-index: 5;
     align-items: center;
-    background-color: rgb(192, 229, 192);
+    /* background-color: rgb(192, 229, 192); */
 }
 
 .categories  {
@@ -92,5 +92,19 @@
 .cart-quantity {
     margin-left: -30px;
     font-size: 1.3vw;
+}
+
+.green{
+    background-color:#fbd363 ;
+    /* background-color:rgb(192, 229, 192) */
+}
+.gold {
+    background-color: #feb8af;
+}
+.yellow {
+    background-color: #fffde9;
+}
+.pink {
+    background-color: #fddcd8;
 }
 

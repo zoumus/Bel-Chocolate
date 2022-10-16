@@ -82,7 +82,7 @@ const CartItemIndex = () => {
                         <h1 className="gift-text">Tip: emoji and special characters aren't supported, remember to include who the order is from!</h1>
                 </div>
                 <div className="total-price">
-                    <h1 className="total-total">total: ${calcTotal()}</h1> 
+                    <h1 className="total-total">total: ${calcTotal() + '.00'}</h1> 
                     <h1 className="checkout-checkout">Shipping calculated at checkout.</h1>
                     {(user && cartItems.length > 0) ? <button id="checkout-button" onClick={handleCheckout}>Checkout</button> : null}
                     {/* <button id="checkout-button" onClick={handleCheckout}>Checkout</button> */}

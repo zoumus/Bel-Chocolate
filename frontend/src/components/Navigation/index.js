@@ -21,11 +21,13 @@ function Navigation() {
     dispatch(fetchUserItems());
     dispatch(fetchProducts());
 
-}, [cartItems.length])
+    }, [cartItems.length]
+  )
 
-useEffect(() => {
-  setSearchBar(false)
-}, [location.pathname])
+  useEffect(() => {
+    setSearchBar(false)
+    }, [location.pathname]
+  )
 
   const cartItemsNum = () => {
     let total = 0;
@@ -35,11 +37,24 @@ useEffect(() => {
         total = total + Number(cartItem.quantity)
     ))
     return total;
+  }
+
+  const color = () =>{
+    if (location.pathname === "/"){
+        return "green"
+    } else if (location.pathname === "/about") {
+        return "gold"
+    } else if (location.pathname === "/products") {
+        return 'yellow'
+    } else if (location.pathname === "/products/:productId") {
+      return 'pink'
+  }
+    
 }
 
   
   return (
-    <div className="links-icons">
+    <div id="links-icons" className={color()}>
       <div className='left'>
         <div className='categories'>
             <div><Link to="/products"><div className="shop-all" onClick={()=>dispatch(fetchProducts())}>Shop All</div></Link></div>

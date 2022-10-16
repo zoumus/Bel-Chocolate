@@ -32,7 +32,7 @@
 }
 
 #image-container {
-    width: 100%;
+    width: 1vw;
     align-items: center;
-    
+    border-radius: 20px
 }
