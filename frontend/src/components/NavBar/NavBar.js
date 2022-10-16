@@ -6,7 +6,7 @@ const NavBar = () => {
 
     return (
         <div className="navbar-wrapper">
-            <p className="navbar-content">"✨SF pickup is back, and we're shipping where weather permits✨Shipping destinations outside the Bay Area with temps above 75° require 2-day or Next-day shipping to avoid melting✨"</p>
+            <div className="navbar-content">✨Shipping US-Wide✨SF Pickup Available✨ ~ ✨Shipping US-Wide✨SF Pickup Available✨ ~ ✨Shipping US-Wide✨SF Pickup Available✨ ~ ✨Shipping US-Wide✨SF Pickup Available✨ ~ ✨Shipping US-Wide✨SF Pickup Available✨ ~ ✨Shipping US-Wide✨SF Pickup Available✨</div>
         </div>
     )
 

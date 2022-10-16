@@ -26,6 +26,7 @@ function HomePage() {
                 <img src={ splashPicture } alt="yummy chocolate" ></img>
                 </div>
             </div>
+            <hr></hr>          
             <Footer/>
         </>
     )

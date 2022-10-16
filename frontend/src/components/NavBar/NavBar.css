@@ -1,12 +1,29 @@
+.navbar-wrapper {
+    background-color: white;
+    width: 100vw;
+    overflow: hidden;
+}
+
 .navbar-content {
-    background-color: #ab5b0e;
+    padding-top: .5vh;
+    padding-bottom: .5vh;
+    color: black;
+    font-size: 2vw;
+    /* text-transform: uppercase; */
     text-align: center;
-    display: block;
-    padding-top: 1.5vh;
-    padding-bottom: 1.5vh;
+    margin-left: 2vw;
     letter-spacing: 0.015em;
-    color: white;
-    font-weight: lighter;
-    
+    white-space: nowrap;
+    will-change: transform;
+    animation-name: shipping-product;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+}
+@keyframes shipping-product {
+    0% {transform: translate(0%);}
+    100% {transform: translate(-100%);}
 }
 

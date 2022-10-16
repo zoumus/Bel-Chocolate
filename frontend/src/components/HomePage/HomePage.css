@@ -5,20 +5,11 @@
     flex-direction: row;
     width:100vw;
     height: 100vh;
-    /* justify-content: space-between; */
-    /* padding-left: 2vw;
-    padding-right: 2vw;
-    padding-top: 5vh; */
-    /* width: 80vw; */
-    /* width: 100%; */
-    /* margin-left: 10vw; */
-    /* margin-right:10vw; */
 }
 
 #splash-text {
     display: flex;
     width: 50%;
-    /* font-family: "Cosmica-Regular"; */
     font-size: 16px;
     line-height: 1.5;
     flex-direction: column;
@@ -33,6 +24,7 @@
 .splash-link {
     display: flex;
     justify-content: flex-start;
+    font-family: poppinsReg;
 }
 
 .first-text {

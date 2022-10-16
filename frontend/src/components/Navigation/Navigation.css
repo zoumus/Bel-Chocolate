@@ -2,9 +2,13 @@
     font-family: poppinsReg;
     src: url(./fonts/apple_garamond/EBGaramond-VariableFont_wght.ttf);
 }
+@font-face {
+    font-family: poppinsTitle;
+    src: url(./fonts/apple_garamond/SuezOne-Regular.ttf);
+}
 
 * {
-    background-color: #fffde9;
+    /* background-color: #fffde9; */
 }
 
 .links-icons{
@@ -13,6 +17,7 @@
     height: 12vh;
     z-index: 5;
     align-items: center;
+    background-color: rgb(99, 160, 99);
 }
 
 .categories  {
@@ -53,8 +58,8 @@
     font-size: 3.5vw;
     display: flex;
     align-items: center;
-    font-weight: bold;
-    font-family: poppinsReg;
+    /* font-weight: bold; */
+    font-family: poppinsTitle;
     margin-right: 25vw;
     margin-left: 2vh;
 }
