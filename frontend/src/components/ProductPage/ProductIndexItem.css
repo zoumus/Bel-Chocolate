@@ -27,12 +27,13 @@
 }
 
 .product-img {
-    width: 25vw;
+    width: 20vw;
+    height: 35vh;
     align-items: center;
+    margin-top: 2vh;
 }
 
 #image-container {
-    width: 1vw;
     align-items: center;
     border-radius: 20px
 }

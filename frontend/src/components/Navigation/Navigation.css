@@ -2,22 +2,23 @@
     font-family: poppinsReg;
     src: url(./fonts/apple_garamond/EBGaramond-VariableFont_wght.ttf);
 }
+
 @font-face {
     font-family: poppinsTitle;
-    src: url(./fonts/apple_garamond/SuezOne-Regular.ttf);
+    src: url(./fonts/apple_garamond/Rakkas-Regular.ttf);
 }
 
-/* * { */
-    /* background-color: #fffde9; */
-/* } */
+/* * {
+    background-color: #fffde9;
+} */
 
 #links-icons{
     display: flex;
     border-bottom: solid 1px rgb(199, 195, 195);
-    height: 12vh;
+    height: 10vh;
     z-index: 5;
     align-items: center;
-    /* background-color: rgb(192, 229, 192); */
+    /* background-color: #fffde9; */
 }
 
 .categories  {
@@ -94,17 +95,13 @@
     font-size: 1.3vw;
 }
 
-.green{
-    background-color:#fbd363 ;
-    /* background-color:rgb(192, 229, 192) */
+.brown {
+    background-color:#fbd363;
 }
-.gold {
+
+.pink {
     background-color: #feb8af;
 }
 .yellow {
     background-color: #fffde9;
 }
-.pink {
-    background-color: #fddcd8;
-}
-

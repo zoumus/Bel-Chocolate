@@ -51,9 +51,7 @@ const ProductShow = () => {
     }
 
     if(!product) return null;
-
-    // const {id, name, pictureUrl, price, description} = product;
-    
+        
     return (
         <>
         <div id="show-page">

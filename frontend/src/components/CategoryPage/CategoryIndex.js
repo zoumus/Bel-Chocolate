@@ -33,7 +33,7 @@ const CategoryIndex = () => {
         
             <div className="category-item">
                 {products.map(product=>(
-                <ProductIndexItem key={product.id} product={product} />
+                <div id='product-list'><ProductIndexItem key={product.id} product={product}/></div>
             ))}
             </div>
         

@@ -4,12 +4,16 @@ import { useSelector } from 'react-redux';
 import { useDispatch} from "react-redux";
 import { fetchByCategory, fetchProducts } from '../../store/product';
 import './Navigation.css';
+import { useParams } from "react-router-dom";
 import {useState, useEffect} from 'react'
+import { fetchProduct, getProduct } from "../../store/product";
 import ProductIndex from '../ProductPage/ProductIndex';
 import SearchBar from '../SearchBar/SearchBar';
 import {getCartItems, fetchUserItems} from '../../store/cart';
 
 function Navigation() { 
+  const {productId} = useParams();
+  const product = useSelector(getProduct(productId));
   const sessionUser = useSelector(state => state.session.user);
   const dispatch = useDispatch();
   const cartItems = useSelector(getCartItems);
@@ -39,22 +43,19 @@ function Navigation() {
     return total;
   }
 
-  const color = () =>{
+  const navnav = () =>{
     if (location.pathname === "/"){
-        return "green"
-    } else if (location.pathname === "/about") {
-        return "gold"
-    } else if (location.pathname === "/products") {
-        return 'yellow'
-    } else if (location.pathname === "/products/:productId") {
-      return 'pink'
+        return "brown"
+    } else if (location.pathname === "/About") {
+        return "pink"
+    } else if (location.pathname === "/products" || location.pathname === "/acount" || location.pathname === "/login" || location.pathname === "/signup" || location.pathname === "/products/category/1" || location.pathname === "/products/category/2" || location.pathname === "/products/category/3"){
+      return "yellow"
+    } 
   }
-    
-}
 
   
   return (
-    <div id="links-icons" className={color()}>
+    <div id="links-icons" className={navnav()}>
       <div className='left'>
         <div className='categories'>
             <div><Link to="/products"><div className="shop-all" onClick={()=>dispatch(fetchProducts())}>Shop All</div></Link></div>
