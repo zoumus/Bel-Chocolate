@@ -57,6 +57,7 @@ function Navigation() {
 
   
   return (
+    // <div className='help'>
     <header id="links-icons" className={navnav()}>
       <div className='left'>
         {/* <div className='categories'> */}
@@ -86,7 +87,8 @@ function Navigation() {
       </div>
         {showSearchBar && <SearchBar setSearchBar={setSearchBar}/> }
         
-    </header>  
+    </header> 
+    // </div> 
   )
 }
 export default Navigation;

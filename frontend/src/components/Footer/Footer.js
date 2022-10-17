@@ -1,13 +1,20 @@
 import './Footer.scss';
 import React from 'react';
-import { AiFillGithub } from "react-icons/ai";
-import { AiOutlineLinkedin } from "react-icons/ai";
-
+import { useLocation } from 'react-router-dom';
 
 
 const Footer = () => {
+    const location = useLocation();
+
+    const foot_footer = () =>{
+        if (location.pathname === "/"){
+            return "brown"
+        } else {
+            return 'yellow'
+        }
+   }
     return (
-        <div class-name="main-footer">
+        <div id="main-footer" className={foot_footer()}>
             <div className='main-footer-content'>
                 <p className='footer-subheading'>Contact:</p>
                 <a className="social-link" href="https://github.com/zoumus" target="_blank">

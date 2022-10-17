@@ -26,5 +26,8 @@
   "dependencies": {
     "react-icon": "^1.0.0",
     "react-icons": "^4.4.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.6.0"
   }
 }

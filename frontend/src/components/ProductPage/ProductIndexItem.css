@@ -25,6 +25,7 @@
 .product-price {
     text-align: center;
     padding: 10%;
+    /* display: none; */
 }
 
 .product-img {
