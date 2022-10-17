@@ -6,6 +6,7 @@ import Footer from "../Footer/Footer.js";
 import { fetchUserItems } from "../../store/cart";
 import { useDispatch, useSelector } from "react-redux";
 import TextCarausel from "./TextCarausel";
+import Products from "./Products";
 
 function HomePage() {
 
@@ -27,7 +28,8 @@ function HomePage() {
                     <img src={ splashPicture } alt="yummy chocolate" ></img>
                 </div>
             </div>   
-            <TextCarausel/> 
+            <TextCarausel/>
+            <Products/> 
         </>
 
     )
