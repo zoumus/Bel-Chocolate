@@ -8,18 +8,19 @@
 .product-name a {
     text-decoration: none;
     color: black;
-    font-size: 2.4vh;
-    font-weight: bold;
-    font-family: "Cosmica-Semibold" !important;
+    font-size: 1.8vh;
+    /* font-weight: bold; */
 }
 .product-name {
     color: black;
+    font-weight: bold;
 }
 
 .bottom {
     display: flex;
     flex-direction: column;  
-    padding: 10%
+    padding: 5%;
+    letter-spacing: .045em;
 }
 .product-price {
     text-align: center;
@@ -27,8 +28,8 @@
 }
 
 .product-img {
-    width: 20vw;
-    height: 35vh;
+    width: 28vw;
+    height: 50vh;
     align-items: center;
     margin-top: 2vh;
 }

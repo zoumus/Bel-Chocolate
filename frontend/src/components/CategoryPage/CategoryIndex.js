@@ -25,7 +25,7 @@ const CategoryIndex = () => {
     if(!categories || categories.length === 0) return null;
     
     return(
-        <>
+        <div id="product-page">
             <div className="header-desc">
                 <div id="category-header"><h1>{categories[categoryId].name}</h1></div>
                 <div id="product-description"><h1>{categories[categoryId].description}</h1></div>
@@ -37,7 +37,7 @@ const CategoryIndex = () => {
             ))}
             </div>
         
-        </>
+        </div>
         
     )
 

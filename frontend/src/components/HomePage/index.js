@@ -5,6 +5,7 @@ import splashPicture from '../../assets/SplashPicture/imageSplash.jpeg';
 import Footer from "../Footer/Footer.js";
 import { fetchUserItems } from "../../store/cart";
 import { useDispatch, useSelector } from "react-redux";
+import TextCarausel from "./TextCarausel";
 
 function HomePage() {
 
@@ -25,8 +26,10 @@ function HomePage() {
                 <div className="splash-image">
                     <img src={ splashPicture } alt="yummy chocolate" ></img>
                 </div>
-            </div>         
+            </div>   
+            <TextCarausel/> 
         </>
+
     )
 }
 export default HomePage;
