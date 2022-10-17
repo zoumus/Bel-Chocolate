@@ -21,6 +21,7 @@ function ProfileButton({ user }) {
     return (<Redirect to='/'/>)
   }
   return (
+    <div className='account-holder'>
     <div className="top-user-profile">
       <div className='user-profile-one'>
         <div className="logout-button" onClick={ logout }>Logout</div>
@@ -30,6 +31,7 @@ function ProfileButton({ user }) {
         <div className="line-border"></div>
         <div className='last-p'>You haven't placed any orders yet  <span className="first-last">{sessionUser.firstName} {sessionUser.lastName}</span></div>
       </div>
+    </div>
     </div>
   )
 }

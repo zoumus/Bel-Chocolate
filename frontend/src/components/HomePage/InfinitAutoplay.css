@@ -1,0 +1,37 @@
+.sliderr {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    padding-bottom: 6vh;
+  }
+  .slide-track {
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 40s linear infinite;
+    align-items: canter;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 9));
+    }
+  }
+  .slide {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: canter;
+    padding: 15px;
+    perspective: 100px;
+  }
+  img {
+    width: 1000px;
+    height: 100%;
+  }
+  

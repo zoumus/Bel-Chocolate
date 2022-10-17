@@ -1,35 +1,36 @@
 import React from "react"
-import aboutImg1 from './about2.jpeg'
-import handChocolate from './handChocolate.jpeg'
+import topoAbout from './aboutImages/about-topo.webp'
+import zuzuAbout from './aboutImages/zuzu.jpg'
+import zuzuChoc from './aboutImages/zuzuzuzu.jpg'
 import "./AboutPage.css"
 
 const AboutPage = () => {
 
     return (
         <>  
-        <h1 className="about-header">About</h1>
-        <br />
-        <div id="about-page">
-            
-            <p className="f-paragraph">"SF’s most audacious chocolate shop" —Eater SF</p>
-            <br />
-            <p>BelChocolate is a modern online chocolate store offering distinct gourmet chocolate & sweet treats handmade in the heart of San Francisco.</p>
-            <br />
-            <p>Creativity is our main ingredient, from our mouth-melting <a href="/products/category/1">chocolate truffles</a>, to our deeply decadent <a href="/products/category/1">gourmet chocolate bars</a> and artful <a href="/products/category/3">chocolate gift boxes</a></p>
-            <img id="about-img1" src={aboutImg1}></img>
-            <p>We're passionate about creating decadent, deep-flavor experiences. Our curated treats take you and your loved ones many places; some new and inspiring, others nostalgic and comforting.</p>
-            <br/>
-            <p>We pride ourselves about being "on another level when it comes to outlandish treats, pushing flavor and design to an unmatched level", according to SF food journalist & poet Paolo Bicchieri.</p>
-            <img id="hand-chocolate" src={handChocolate}></img>
-            <br/>
-            <p>Founded in 2020 by two best friends: Simon Brown, a staple San Francisco pastry chef and chocolatier, and Beau Monroe, an artist and designer who's previous work you see daily on your local store's shelves.</p>
-            <br/>
-            <br/>
-            <p>Have a question? You may contact us at this <a href='mailto: hello@topogato.com'>Email</a></p>
-            <br/>
-            <br/>
+            <div className="zuzu-topo" id="topo-about">
+                <div><img src={topoAbout} alt=""/></div>
+                <div className="about">
+                    <h1 className="about-header">SF’s most audacious chocolate shop</h1>
+                    <h2 className="about-desc">Topogato is a modern online chocolate store offering distinct gourmet chocolate & sweet treats handmade in the heart of San Francisco. Creativity is our main ingredient, from our mouth-melting chocolate truffles, to our deeply decadent gourmet chocolate bars and artful chocolate gift boxes.</h2>
+                </div>
+            </div>
 
-        </div>
+            <div className="zuzu-topo" id="zuzu-about">
+                <div><img src={zuzuAbout} alt=""/></div>
+                <div className="about">
+                    <h1 className="about-header">Chocolate Lover</h1>
+                    <div className="about-desc">Yes I'm a chocolate lover, Who doesn’t love chocolate? Chocolate is so good that sometimes it’s hard to find the right words to describe your favourite chocolate.
+                    <br></br>
+                    Hey, I'M Zuzu  and I'm a full-stack software engineer with experience in Javascript, React, Redux, Node, Ruby on Rails, and PostgresQL.
+                    <br></br>
+                    I chose to clone this website particularly for it's clean, modern, and easily navigatable layout.</div>
+                </div>
+            </div>
+
+            <div className='chocolate-hand'><img src={zuzuChoc} alt=""/></div>
+
+            
         </>
         
     )

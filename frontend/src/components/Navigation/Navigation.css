@@ -102,7 +102,7 @@
     top: 0;
     left: 0;
     right: 0;
-    border-bottom: solid 1px rgb(199, 195, 195);
+    border-bottom: solid 1px rgb(142, 139, 139);
     height: 5vh;
     font-family: poppinsNav;
   }
@@ -166,7 +166,7 @@
 }
 
 .pink {
-    background-color: #feb8af;
+    background-color: #9ccbcc;
 }
 .yellow {
     background-color: #fffde9;

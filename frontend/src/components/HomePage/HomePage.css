@@ -1,3 +1,6 @@
+ a {
+  color: black;
+ }
  #splash-section { 
     background-color: #fffde9;
     color: black;
@@ -57,6 +60,15 @@
   background-color: #fffde9;
   border-bottom: 1px solid rgb(232, 227, 227);
   font-family: 'Droid Serif', serif;
+  font-weight: bold;
+}
+
+.content-slider2 {
+  width: 100%;
+  height: 360px;
+  background-color: #fcd263;
+  /* border-bottom: 1px solid rgb(232, 227, 227); */
+  font-family: poppinsTitle;
 }
 
 .slider {
@@ -89,7 +101,7 @@
 
 .slider .quote {
   font-size: 38px;
-  font-style: italic;
+  /* font-style: italic; */
   width: 30vw;
   margin-left: 110px;
   margin-top: 30px;
@@ -98,6 +110,12 @@
 .slider .source {
   font-size: 20px;
   text-align: center;
+}
+
+.slider .newSource {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 5vw;
 }
 .source img {
     width: 10vw;
@@ -318,12 +336,6 @@
   }
 }
 /*about products*/
-
-/* .wholeProduts {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
 .home-products {
   display: flex;
   background-color: #fffde9;
@@ -332,7 +344,6 @@
   padding-bottom: 5vw;
   padding-top: 5vw;
   border-bottom: 1px solid rgb(232, 227, 227);
-  /* height: 70vh; */
 }
 .right img {
   object-fit: cover;
@@ -369,70 +380,6 @@
   font-family: "T-Star Regular";
 }
 
-/* infinit autoplay*/
 
-/* body {
-	align-items: center;
-	background: #E3E3E3;
-	display: flex;
-	height: 100vh;
-	justify-content: center;
-} */
-
-/* @mixin white-gradient {
-	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-}
-
-$animationSpeed: 40s; */
-
-/* Animation */
-/* @keyframes scroll {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 7))}
-} */
-
-
-/* Styling*/
-/* .slider {
-	background: white;
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-	height: 100px;
-	margin: auto;
-	overflow:hidden;
-	position: relative;
-	width: 960px;
 	
-	&::before, */
-	/* &::after {
-		@include white-gradient;
-		content: "";
-		height: 100px;
-		position: absolute;
-		width: 200px;
-		z-index: 2;
-	}
 	
-	&::after {
-		right: 0;
-		top: 0;
-		transform: rotateZ(180deg);
-	} */
-
-	/* &::before {
-		left: 0;
-		top: 0;
-	}
-	
-	.slide-track {
-		animation: scroll $animationSpeed linear infinite;
-		display: flex;
-		width: calc(250px * 14);
-	}
-	
-	.slide { */
-		/* height: 100px;
-		width: 250px;
-	}
-} */
-
-/* display reviews */

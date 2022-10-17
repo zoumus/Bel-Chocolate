@@ -73,7 +73,7 @@ const CartListings = ({cartItem}) => {
                     <div className="showshow-quantity">
                         <div className=" button-counter">
                             <button classname='plus-button-cart' onClick={e => setCount(count+1)}>+</button>
-                            <input type="text" classname="show-input-cart" value={count} onChange={e => setCount(e.target.value)}></input>
+                            <input type="text" className="show-input-cart" value={count} onChange={e => setCount(e.target.value)}></input>
                             <button className='minus-button-cart' onClick={() => ((count -1) > 0 ? setCount(count - 1) : setCount(1))}>-</button>
                         </div>
                     

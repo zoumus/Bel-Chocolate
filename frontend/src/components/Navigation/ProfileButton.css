@@ -1,14 +1,17 @@
+.account-holder {
+    background-color: #fffde9;
+}
 .user-profile-one {
-    margin-top: 10vh;
+    padding-top: 12vh;
     margin-left: 10vh;
-    padding: 1vh;
     line-height: 4vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: normal;
     width: 60vw;
-    
+    padding-bottom: 37vh;
+
 }
 .my-account {
     font-size: 3.2vh;

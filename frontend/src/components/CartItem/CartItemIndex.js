@@ -57,7 +57,7 @@ const CartItemIndex = () => {
 
     } else {
         return (
-            <>
+            <div className='cart-holder'>
             
             <div classname="cart-first">
                  <h1 className="cart-first-h1">Cart</h1>
@@ -91,7 +91,7 @@ const CartItemIndex = () => {
                 
             </div>
             </div>
-            </>
+            </div>
         )
     }
 }

@@ -1,38 +1,53 @@
-* {
-    font-family: Cosmica;
-}
-#about-page {
-    margin-left: 30vw;
-    margin-right: 30vw;
-    margin-top: 7vh;
-    width: 70vh;
-    line-height: 2.5vh;
-    /* letter-spacing: .05vw; */
-    color: rgb(71, 62, 62);
-}
-.about-header {
+.zuzu-topo {
+    background-color: #9dcbcd;
+    font-size: 2vw;
     display: flex;
-    justify-content: space-around;
-    margin-top: 5vh;
-    font-size: 4vh;
-    font-weight: bold;
-}
-.f-paragraph {
-    font-weight: bold;
-}
-#about-img1 {
-    margin-left: 2.5vw;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
-}
-#hand-chocolate {
-    width: 45%;
-    height: 45%;
-    margin-left: 10vw;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 4vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 4vh;
 }
 
-a {
-    color: black;
+#zuzu-about {
+    background-color: rgb(222, 174, 174);
 }
+
+.zuzu-topo img {
+    object-fit: cover;
+    width: 40vw;
+    height: 70vh;
+    border-radius: 3vh;
+    margin: 3vh;
+  
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2vw;
+}
+
+.about-header {
+    font-size: 3vw;
+    letter-spacing: 0.02em;
+    padding-bottom: 4vh;
+    font-weight: bold;
+}
+
+.about-desc {
+    font-size: 1.5vw;
+    font-family: "T-Star Regular";
+    line-height: 4.25vh;
+    letter-spacing: 0.02em;
+}
+
+.chocolate-hand img{
+    width: 100%;
+    height: 90vh;
+    
+}
+
+

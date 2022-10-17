@@ -1,3 +1,6 @@
+.cart-holder {
+    background-color: #fffde9;
+}
 .empty-cart {
     width: 100vw;
     height: 70vh;
@@ -44,7 +47,7 @@
 }
 
 .cart-first-h1 {
-    margin-top: 5vh;
+    padding-top: 5vh;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -58,6 +61,9 @@
     width: 100%;
     margin-bottom: 1vh;
     border-bottom: solid rgb(220, 215, 215) 1px;
+}
+.show-input, .show-input-cart {
+    background-color: #fffde9;
 }
 
 .show-listing{
