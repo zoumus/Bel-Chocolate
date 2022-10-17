@@ -7,18 +7,17 @@
     font-family: poppinsTitle;
     src: url(./fonts/apple_garamond/Rakkas-Regular.ttf);
 }
-
-/* * {
-    background-color: #fffde9;
-} */
-
+@font-face {
+    font-family: poppinsNav;
+    src: url(./fonts/apple_garamond/Poppins/Poppins-Light.ttf);
+}
+/* 
 #links-icons{
     display: flex;
     border-bottom: solid 1px rgb(199, 195, 195);
     height: 10vh;
     z-index: 5;
     align-items: center;
-    /* background-color: #fffde9; */
 }
 
 .categories  {
@@ -59,7 +58,6 @@
     font-size: 3.5vw;
     display: flex;
     align-items: center;
-    /* font-weight: bold; */
     font-family: poppinsTitle;
     margin-right: 25vw;
     margin-left: 2vh;
@@ -93,7 +91,76 @@
 .cart-quantity {
     margin-left: -30px;
     font-size: 1.3vw;
-}
+} */
+
+#links-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    padding: 20px;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: solid 1px rgb(199, 195, 195);
+    height: 5vh;
+    font-family: poppinsNav;
+  }
+  
+  .left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .left div {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+  }
+  
+  .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* margin-right: 1vw; */
+  }
+  
+  .right div {
+    padding-right: 10px;
+    padding-left: 10px;
+    /* font-size: 1.05rem; */
+    font-weight: bold;
+  }
+  
+  .nav-link:hover {
+    cursor: pointer;
+  }
+  .nav-link, .nav-link a{
+    text-decoration: none;
+  }
+  
+  .middle {
+    font-size: 3.5vw;
+    font-family: poppinsTitle;
+    /* margin-left: -8vw; */
+  }
+  .middle a {
+    text-decoration: none;
+  }
+  
+  #account-icon, #cart-icon, #search-icon {
+    width: 20px;
+    height: 15px;
+    padding-right: 8px;
+    /* font-size: large; */
+    font-size: medium;
+  }
+  .nav-link {
+    font-size: 1vw;
+    font-weight: bold;
+  }
 
 .brown {
     background-color:#fbd363;

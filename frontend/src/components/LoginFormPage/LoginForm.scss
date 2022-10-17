@@ -1,4 +1,7 @@
 
+.login-backg {
+    background-color: #fffde9
+}
 .loginForm {
     display:flex;
     flex-direction: column;
@@ -7,19 +10,15 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
-    margin-top: 15vh;
+    padding-top: 15vh;
     width: 30vw;
     height: 100vh;
+    // background-color: #fffde9;
     input, .login-button {
         width: stretch;
         margin-bottom: 2vh;
         padding: 13px 15px;
     }
-    // span, a {
-    //     font-family: "Cosmica-Regular";
-    //     font-size: 16px;
-    //     line-height: 1.5;
-    // }
 }
 .create-account {
     margin-bottom: 1.5vh;

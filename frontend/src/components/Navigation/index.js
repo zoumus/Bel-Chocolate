@@ -50,43 +50,43 @@ function Navigation() {
         return "pink"
     } else if (location.pathname === "/products" || location.pathname === "/acount" || location.pathname === "/login" || location.pathname === "/signup" || location.pathname === "/products/category/1" || location.pathname === "/products/category/2" || location.pathname === "/products/category/3"){
       return "yellow"
-    } 
+    } else {
+      return 'yellow'
+    }
   }
 
   
   return (
-    <div id="links-icons" className={navnav()}>
+    <header id="links-icons" className={navnav()}>
       <div className='left'>
-        <div className='categories'>
-            <div><Link to="/products"><div className="shop-all" onClick={()=>dispatch(fetchProducts())}>Shop All</div></Link></div>
-            <div><Link to="/products/category/1"><div className="truffles" onClick={()=> dispatch(fetchByCategory(1))}>Truffles</div></Link></div>
-            <div><Link to ="/products/category/2"><div className="bars" onClick={()=> dispatch(fetchByCategory(2))}>Bars</div></Link></div>
-            <div><Link to="/products/category/3"><div className="sets" onClick={()=> dispatch(fetchByCategory(3))}>Sets</div></Link></div>
-            <div><div><Link exact to="/About">Info</Link></div></div>
-        </div>
+        {/* <div className='categories'> */}
+        <div><Link to="/products" className="nav-link" onClick={()=>dispatch(fetchProducts())}>Shop All</Link></div>
+        <div><Link to="/products/category/1" className="nav-link" onClick={()=> dispatch(fetchByCategory(1))}>Truffles</Link></div>
+        <div><Link to ="/products/category/2" className="nav-link" onClick={()=> dispatch(fetchByCategory(2))}>Bars</Link></div>
+        <div><Link to="/products/category/3" className="nav-link" onClick={()=> dispatch(fetchByCategory(3))}>Sets</Link></div>
+        <div><Link exact to="/About" className="nav-link">About</Link></div>
+        {/* </div> */}
       </div>
 
       <div className='middle'>
-          <NavLink exact to="/">BelChocolate</NavLink>
+        <NavLink exact to="/">BelChocolate</NavLink>
       </div>
       
-        <div className='right'>
-                <div id="account-link">
-                  {!sessionUser ? (<a href="/login"><i className="fa-solid fa-user" ></i></a>) : (<a href="/account"><i className="fa-solid fa-user" ></i></a>)} 
-                </div>
-                <div onClick={()=> setSearchBar(!showSearchBar)}id="search-link">
-                  <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-                </div>
-                <div id="cart-link">
-                {!sessionUser ? (<a href="/login"><i className="fa-solid fa-cart-shopping"></i></a>) : (<a href="/cart"><i className="fa-solid fa-cart-shopping"></i></a>)}                   
-                </div>
-                <div className="cart-quantity">{cartItemsNum()}</div>
-
-                
+      <div className='right'>
+        <div className="nav-link">
+          {!sessionUser ? (<a href="/login"><i className="fa-solid fa-user" id="account-icon"></i>Account</a>) : (<a href="/account"><i className="fa-solid fa-user" id="account-icon"></i>Account</a>)} 
         </div>
+        <div className="nav-link" onClick={()=> setSearchBar(!showSearchBar)}>
+          <i class="fa-sharp fa-solid fa-magnifying-glass" id="search-icon"></i>Search
+        </div>
+        <div className="nav-link">
+        {!sessionUser ? (<a href="/login"><i className="fa-solid fa-cart-shopping" id="cart-icon"></i>Cart {cartItemsNum()}</a>) : (<a href="/cart"><i className="fa-solid fa-cart-shopping" id="cart-icon"></i>Cart {cartItemsNum()}</a>)}                   
+        </div>
+        {/* <div className="cart-quantity">{cartItemsNum()}</div>          */}
+      </div>
         {showSearchBar && <SearchBar setSearchBar={setSearchBar}/> }
         
-    </div>  
+    </header>  
   )
 }
 export default Navigation;

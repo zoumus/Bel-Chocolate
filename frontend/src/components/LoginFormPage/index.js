@@ -37,7 +37,7 @@ function LoginFormPage() {
   }
 
   return (
-    <>
+    <div className="login-backg">
     
     <div className='loginForm'>
       <form onSubmit={handleSubmit}>
@@ -78,7 +78,7 @@ function LoginFormPage() {
       </form>
     </div>
      
-    </>
+    </div>
   );
 }
 
