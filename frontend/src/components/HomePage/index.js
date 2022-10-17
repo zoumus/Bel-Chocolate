@@ -30,8 +30,8 @@ function HomePage() {
                 </div>
             </div>   
             <TextCarausel/>
-            <Products/> 
-            <InfinitAutoplay/>
+            <Products/>
+            {/* <InfinitAutoplay/> */}
         </>
 
     )

@@ -360,39 +360,40 @@
   font-family: "T-Star Regular";
   line-height: 3.25vh;
   letter-spacing: 0.02em;
-  margin-bottom: 3vh;;
+  margin-bottom: 3vh;
 }
-.text-desc button {
-  padding: 1.5vh;
+.text-desc div {
+  /* padding: 1.5vh; */
   width: 35%;
   font-size: 15px;
+  font-family: "T-Star Regular";
 }
 
 /* infinit autoplay*/
 
-body {
+/* body {
 	align-items: center;
 	background: #E3E3E3;
 	display: flex;
 	height: 100vh;
 	justify-content: center;
-}
+} */
 
-@mixin white-gradient {
+/* @mixin white-gradient {
 	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
 }
 
-$animationSpeed: 40s;
+$animationSpeed: 40s; */
 
 /* Animation */
-@keyframes scroll {
+/* @keyframes scroll {
 	0% { transform: translateX(0); }
 	100% { transform: translateX(calc(-250px * 7))}
-}
+} */
 
 
 /* Styling*/
-.slider {
+/* .slider {
 	background: white;
 	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
 	height: 100px;
@@ -401,8 +402,8 @@ $animationSpeed: 40s;
 	position: relative;
 	width: 960px;
 	
-	&::before,
-	&::after {
+	&::before, */
+	/* &::after {
 		@include white-gradient;
 		content: "";
 		height: 100px;
@@ -415,9 +416,9 @@ $animationSpeed: 40s;
 		right: 0;
 		top: 0;
 		transform: rotateZ(180deg);
-	}
+	} */
 
-	&::before {
+	/* &::before {
 		left: 0;
 		top: 0;
 	}
@@ -428,8 +429,10 @@ $animationSpeed: 40s;
 		width: calc(250px * 14);
 	}
 	
-	.slide {
-		height: 100px;
+	.slide { */
+		/* height: 100px;
 		width: 250px;
 	}
-}
+} */
+
+/* display reviews */
