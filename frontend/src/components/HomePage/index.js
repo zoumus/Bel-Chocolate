@@ -7,6 +7,7 @@ import { fetchUserItems } from "../../store/cart";
 import { useDispatch, useSelector } from "react-redux";
 import TextCarausel from "./TextCarausel";
 import Products from "./Products";
+import InfinitAutoplay from "./InfinitAutoplay";
 
 function HomePage() {
 
@@ -30,6 +31,7 @@ function HomePage() {
             </div>   
             <TextCarausel/>
             <Products/> 
+            <InfinitAutoplay/>
         </>
 
     )

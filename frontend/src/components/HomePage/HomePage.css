@@ -318,3 +318,118 @@
   }
 }
 /*about products*/
+
+/* .wholeProduts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+.home-products {
+  display: flex;
+  background-color: #fffde9;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  padding-bottom: 5vw;
+  padding-top: 5vw;
+  border-bottom: 1px solid rgb(232, 227, 227);
+  /* height: 70vh; */
+}
+.right img {
+  object-fit: cover;
+  width: 99%;
+  display: flex;
+  height: 100%;
+}
+
+.text-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2vw;
+  padding-right: 10vw;
+  padding-left: 10vw;
+  font-family: poppinsTitle;
+}
+.text-desc h1 {
+  font-size: 2.5vw;
+  letter-spacing: 0.02em;
+  padding-bottom: 4vh;
+}
+.text-desc p{
+  font-size: 1.35vw;
+  font-family: "T-Star Regular";
+  line-height: 3.25vh;
+  letter-spacing: 0.02em;
+  margin-bottom: 3vh;;
+}
+.text-desc button {
+  padding: 1.5vh;
+  width: 35%;
+  font-size: 15px;
+}
+
+/* infinit autoplay*/
+
+body {
+	align-items: center;
+	background: #E3E3E3;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+}
+
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+$animationSpeed: 40s;
+
+/* Animation */
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
+
+
+/* Styling*/
+.slider {
+	background: white;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 960px;
+	
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(250px * 14);
+	}
+	
+	.slide {
+		height: 100px;
+		width: 250px;
+	}
+}
