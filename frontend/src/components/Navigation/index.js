@@ -84,8 +84,9 @@ function Navigation() {
         {!sessionUser ? (<a href="/login"><i className="fa-solid fa-cart-shopping" id="cart-icon"></i>Cart {cartItemsNum()}</a>) : (<a href="/cart"><i className="fa-solid fa-cart-shopping" id="cart-icon"></i>Cart {cartItemsNum()}</a>)}                   
         </div>
         {/* <div className="cart-quantity">{cartItemsNum()}</div>          */}
+        <div className='leaveme'>{showSearchBar && <SearchBar setSearchBar={setSearchBar}/> }</div>
+
       </div>
-        {showSearchBar && <SearchBar setSearchBar={setSearchBar}/> }
         
     </header> 
     // </div> 

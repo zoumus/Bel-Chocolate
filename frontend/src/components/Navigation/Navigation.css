@@ -11,87 +11,9 @@
     font-family: poppinsNav;
     src: url(./fonts/apple_garamond/Poppins/Poppins-Light.ttf);
 }
-/* 
-#links-icons{
-    display: flex;
-    border-bottom: solid 1px rgb(199, 195, 195);
-    height: 10vh;
-    z-index: 5;
-    align-items: center;
+.leaveme {
+  width: 0vw;
 }
-
-.categories  {
-    display: flex;
-    justify-content: center;
-    color: black;
-    align-items: center;
-    margin-right: 10vw;
-}
-
-.categories a {
-    text-decoration: none;
-}
-
-.left {
-    margin-top: 1.5vh;
-    margin-left: 2%;
-    margin-right: 0;
-}
-
-.shop-all {
-    width: 100%
-}
-
-.categories div{
-    cursor: pointer;
-    width: 5vw;
-    font-weight: bold;
-    font-family: poppinsReg;
-}
-
-.categories a {
-    color: black;
-    width: 50vw;
-}
-
-.middle{
-    font-size: 3.5vw;
-    display: flex;
-    align-items: center;
-    font-family: poppinsTitle;
-    margin-right: 25vw;
-    margin-left: 2vh;
-}
-
-.middle a {
-    color: black;
-    text-decoration: none;
-    margin-left: 4vw;
-    letter-spacing: .2vw;
-}
-
-.right {
-    display: flex;
-    width: 15vw;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-left: 3vw;
-}
-
-.right i {
-    font-size: 1vw;
-    color: black;
-}
-
-#cart-link {
-    display: flex;
-    justify-content: center;
-}
-
-.cart-quantity {
-    margin-left: -30px;
-    font-size: 1.3vw;
-} */
 
 #links-icons {
     display: flex;
