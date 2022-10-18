@@ -19,13 +19,13 @@ const Products = () => {
             </div>
 
             <div className='home-products'>
-                <div className="right">
-                    <img src={ boxPicture } alt="yummy chocolate" ></img>
-                </div>
                 <div className="text-desc">
                     <h1>Chocolate Gift Boxes</h1>
                     <p>Curated assortments of treats with vivid flavor profiles & eye candy that can't be found elsewhere.</p>
                     <div><Link to='products/category/3'>SHOP BOXES</Link></div>
+                </div>
+                <div className="right">
+                    <img src={ boxPicture } alt="yummy chocolate" ></img>
                 </div>
             </div>
 

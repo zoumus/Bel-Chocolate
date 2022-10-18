@@ -9,10 +9,6 @@ import { FaStar } from 'react-icons/fa';
 import { formatDateTime } from "../../util/dateUtil"; 
 import Avatar from '@mui/joy/Avatar';
 
-// export default function MyApp() {
-//   return <Avatar />;
-// }
-
 const ReviewIndex  = () => {
 
     const dispatch = useDispatch();
@@ -20,7 +16,6 @@ const ReviewIndex  = () => {
     const currentUserId = useSelector(state=> state.session.user?.id)
     const [showModal, setShowModal] = useState(false);
     const [selectedReview,setSelectedReview] = useState();
-    //selectedReview = the review we select
 
     const showStar = (rating)=>{
         if (rating===1){
@@ -85,19 +80,16 @@ const ReviewIndex  = () => {
 
     return(                                                                                                                                              
         <div className="review-overall-container">
-            <div>    
-            </div>
+    
             <div className="review-container">
                 <div className="whrite-reviews">
-                    {/* <div className="review-reviews"></div> */}
                     <button onClick={()=>{ 
-                                    setSelectedReview(null)
-                                    setShowModal(true)
-                                    }} className="write-a-review">Write a Review
+                        setSelectedReview(null)
+                        setShowModal(true)
+                        }} className="write-a-review">Write a Review
                     </button>
                 </div>
             
-
                 {reviews.map(review=> (
                     <div className="reviews-info">
                         <div className="review-name-date">
@@ -130,7 +122,6 @@ const ReviewIndex  = () => {
                         
                     </div>
                 ))}
-            {/* <button onClick={()=>setShowModal(true)}>Write a Review</button> */}
             
             {showModal && <ReviewFormModal 
             setShowModal={setShowModal}

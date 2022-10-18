@@ -1,7 +1,7 @@
 
 .review-overall-container{
     display: flex;
-    background-color: #fffde9;
+    background-color: rgb(222, 172, 222);
 }
 .review-container{
     display: flex;

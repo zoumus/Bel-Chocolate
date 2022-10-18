@@ -69,6 +69,7 @@ const ProductShow = () => {
                                     <input type="text" className="show-input" value={count} onChange={handleInput}></input>
                                     <button className='minus-button' onClick={() => ((parseInt(count) - 1) > 0 ? setCount(parseInt(count) - 1) : setCount(1))}>-</button>
                                 </div>
+
                         </div>
                         <button id="show-add-button" onClick={handleAddToCart}>Add to cart</button>
                         <h1 className="desc-show">Description:</h1>

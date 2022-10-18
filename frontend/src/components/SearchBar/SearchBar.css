@@ -1,15 +1,8 @@
-/* body {
-    overflow: hidden; 
-} */
 #search-on-click{
-    /* width: 100vw; */
     height: 5vh;
-    /* background-color: beige; */
-    /* background-color: #fffde9; */
-
 }
+
 .bg-modal-sb {
-    /* overflow: hidden; */
     z-index: 4;
     position: fixed;
     top: 15vh;
@@ -18,14 +11,15 @@
     height: 100vh;
     background-color: rgba(159, 155, 155, 0.5);
 }
+
 .overflow {
     overflow: hidden;
 }
+
 .search-bar-page {
     overflow: hidden;
-    /* background-color: #fffde9; */
-
 }
+
 .search-bar-dropdown {
     position: fixed;
     top: 13.8vh;
@@ -33,63 +27,40 @@
     right: 0;
     left: 0;
     bottom: 0;
-    /* width: 100vw; */
     height: 8.5vh;
     display: flex;
     justify-content: center;
     align-items: center; 
-    /* border: 1px solid rgb(202, 197, 197);  */
     background-color: #fffde9;
-
-
-     transition-timing-function: ease-in 10s;
-    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-
 
 .search-page {
     height: 10vh;
-    /* width: 100vw; */
-    -webkit-animation: mover 500ms ease;
-    animation: mover 500ms ease;
-    /* background-color: #fffde9; */
-
 }
 
 .search-bar-dropdown {
     display: flex;
     justify-content: space-between;
-    /* background-color: #fffde9; */
-
 }
 
 .search-page form {
-    /* height: 100%; */
     display: flex;
     align-items: center;
-    /* width: 100%; */
-    /* background-color: #fffde9; */
-
 }
 
 .search-wait input {
     outline: none;
     border: none;
     font-size: 30px;
-    /* background-color: #fffde9; */
-
-    /* width: 100%; */
 }
 
 .search-bar-dropdown {
     background-color: #fffde9;
-    /* width: 100%; */
 }
 
 .search-bar-dropdown input {
     border: none;
     height: 5vh;
-    /* width: 1000px; */
     background-color: #fffde9;
 
 }
@@ -104,49 +75,39 @@
     display: flex;
     align-items: center;
     background-color: #fffde9;
-
 }
+
 .search-text input {
-    /* margin-left: 1vw; */
     font-size: 2vh;
     background-color: #fffde9;
-
 }
-.overflow {
 
-}
 .search-bar-button {
 	cursor: pointer;
     margin-right: 1vw;
-    /* background-color: #fffde9; */
-
 }
+
 .close-bar{
     font-size: 2.5vh;
-    /* color: rgb(139, 134, 134); */
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /* background-color: #fffde9; */
-
+    color: rgb(86, 84, 84);
+    font-family: poppinsNav;
+    padding-right: 1vw;
 }
+
 #no-products-icon {
     display: flex;
     width: 100vw;
     height: 80vh;
     justify-content:center;
     align-items: center;
-    /* background-color: #fffde9; */
-
 }
 
 .no-products {
     font-size: 3vh;
     font-weight: bold;
-    /* background-color: #fffde9; */
-
 }
+
 #fa-cry {
     margin-left: .8vw;
     transform: scale(1.3);
-    /* background-color: #fffde9; */
-
 }
