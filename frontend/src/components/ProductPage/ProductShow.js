@@ -62,15 +62,15 @@ const ProductShow = () => {
                 <div id="show-text-container">
                         <div id="show-name">{product.name}</div>
                         <div id="show-price">${(Math.round(product.price * 100)/100).toFixed(2)}</div>
-                        <div id="show-quantity-container">
-                            <label htmlFor="show-quantity-container" id="show-label"></label>
+                        {/* <div id="show-quantity-container"> */}
+                            {/* <label htmlFor="show-quantity-container" id="show-label"></label> */}
                                 <div className="show-quantity">
                                     <button className='plus-button' onClick={() => setCount(parseInt(count) + 1)}>+</button>
                                     <input type="text" className="show-input" value={count} onChange={handleInput}></input>
                                     <button className='minus-button' onClick={() => ((parseInt(count) - 1) > 0 ? setCount(parseInt(count) - 1) : setCount(1))}>-</button>
                                 </div>
 
-                        </div>
+                        {/* </div> */}
                         <button id="show-add-button" onClick={handleAddToCart}>Add to cart</button>
                         <h1 className="desc-show">Description:</h1>
                         <div id="show-description">{product.description}</div>
