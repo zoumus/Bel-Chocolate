@@ -1,15 +1,17 @@
 
 .review-overall-container{
     display: flex;
-    background-color: rgb(222, 172, 222);
+    background-color: rgb(236, 221, 236);
+    width: 100vw;
 }
 .review-container{
     display: flex;
     flex-direction: column;
-    margin-left: 10vw;
-    justify-content: flex-start;
-    width: 40vw;
-    /* background-color: #fffde9; */
+    margin-left: 10%;
+    margin-right: 10%;
+    /* justify-content: center; */
+    align-items: center;
+    width: 80%;
 }
 .bg-modal{
     position: fixed;
@@ -39,28 +41,33 @@
 }
 
 .reviews-info{
-    font-size: 1.1vw;
+    font-size: 1.5vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 50vw;
+    width: 100%;
     margin-bottom: 30px;
     border-bottom: 1px solid black;
+    font-family: 'T-Star';
 }
 
 .review-firstname{
-    font-size: 1.2vw;
+    font-size: 1.6vw;
     margin-right: 2vh;
     border-bottom: solid black 1px;
 }
 
 .review-date {
-    font-size: 1.2vw;
+    /* font-size: 1.2vw; */
     margin-right: 8vw;
 }
 
 .review-name-date{
     display: flex;
+    font-size: 1.6vw;
+
+    /* justify-content: space-between;
+    align-items: space-between; */
 }
 
 .review-rating {
@@ -68,12 +75,14 @@
 }
 .review-title {
     font-weight: bold;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     margin-bottom: 2vh;;
 }
 
 .review-body {
     margin-bottom: 2vh;
+    font-size: 1.2vw;
+
 }
 .delete-button {
     background: none;
@@ -160,10 +169,14 @@ input[type="radio"] {
 }
 .whrite-reviews {
     margin-bottom: 3vh;
-    padding: 1vh;
+    padding: 3vh;
+    
 }
 .write-a-review {
-    padding: 1vh;
+    padding: 1.2vh;
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: flex-start; */
 }
 
 .errors {
