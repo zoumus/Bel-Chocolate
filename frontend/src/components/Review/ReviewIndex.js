@@ -21,7 +21,7 @@ const ReviewIndex  = () => {
         if (rating===1){
              return (
                 <div>
-                    <FaStar color="#ab5b0e"/>
+                    <FaStar color="#c19533"/>
                     <FaStar color="grey"/>
                     <FaStar color="grey"/>
                     <FaStar color="grey"/>
@@ -34,8 +34,8 @@ const ReviewIndex  = () => {
         if (rating===2){
          return (
              <div>
-                 <FaStar color="#ab5b0e"/>
-                 <FaStar color="#ab5b0e"/>
+                 <FaStar color="#c19533"/>
+                 <FaStar color="#c19533"/>
                  <FaStar color="grey"/>
                  <FaStar color="grey"/>
                  <FaStar color="grey"/>
@@ -46,9 +46,9 @@ const ReviewIndex  = () => {
          if (rating===3){
                   return (
              <div>
-                 <FaStar color="#ab5b0e"/>
-                 <FaStar color="#ab5b0e"/>
-                 <FaStar color="#ab5b0e"/>
+                 <FaStar color="#c19533"/>
+                 <FaStar color="#c19533"/>
+                 <FaStar color="#c19533"/>
                  <FaStar color="grey"/>
                  <FaStar color="grey"/>
 
@@ -58,10 +58,10 @@ const ReviewIndex  = () => {
          if (rating===4){
                   return (
              <div>
-                 <FaStar color="#ab5b0e"/>
-                 <FaStar color="#ab5b0e"/>
-                 <FaStar color="#ab5b0e"/>
-                 <FaStar color="#ab5b0e"/>
+                 <FaStar color="#c19533"/>
+                 <FaStar color="#c19533"/>
+                 <FaStar color="#c19533"/>
+                 <FaStar color="#c19533"/>
                  <FaStar color="grey"/>
 
               </div>
@@ -70,19 +70,21 @@ const ReviewIndex  = () => {
          if (rating===5){
                   return (
              <div>
-                 <FaStar color="#ab5b0e"/>
-                 <FaStar color="#ab5b0e"/>
-                 <FaStar color="#ab5b0e"/>
-                 <FaStar color="#ab5b0e"/>
-                 <FaStar color="#ab5b0e"/>
+                 <FaStar color="#c19533"/>
+                 <FaStar color="#c19533"/>
+                 <FaStar color="#c19533"/>
+                 <FaStar color="#c19533"/>
+                 <FaStar color="#c19533"/>
               </div>
         )}}
 
-    return(                                                                                                                                              
+    return( 
+        <div className="overall-box">                                                                                                                                             
         <div className="review-overall-container">
     
             <div className="review-container">
                 <div className="whrite-reviews">
+                    <div className="review-header">Review</div>
                     <button onClick={()=>{ 
                         setSelectedReview(null)
                         setShowModal(true)
@@ -92,9 +94,11 @@ const ReviewIndex  = () => {
             
                 {reviews.map(review=> (
                     <div className="reviews-info">
-                        <div className="review-name-date">
-                            <div className="review-firstname">{review.userName}</div>
-                            <div className="review-date">{formatDateTime(review.updatedAt)}</div>
+                        <div className="review-name-date-buttons">
+                            <div className="review-name-date">
+                                <div className="review-firstname">{review.userName}</div>
+                                <div className="review-date">{formatDateTime(review.updatedAt)}</div>
+                            </div>
 
                             {currentUserId === review.userId && (
                             <>
@@ -127,6 +131,7 @@ const ReviewIndex  = () => {
             setShowModal={setShowModal}
             selectedReview={selectedReview} />}
             </div>
+        </div>
         </div>
     )
 }

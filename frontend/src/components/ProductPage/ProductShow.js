@@ -28,14 +28,13 @@ const ProductShow = () => {
 
     const handleInput = () => {
         let input = parseInt(document.getElementById("show-input").value);
-        console.log(input + 1)
+        
         if (input > 0) {
             setCount(input)
         } else {
             setCount("")
         }
     }
-    console.log(item, "item")
     const handleAddToCart = (e) => {
         e.preventDefault();
         if (!user) {

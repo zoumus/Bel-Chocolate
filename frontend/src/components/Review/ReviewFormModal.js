@@ -98,7 +98,7 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
 
                             <FaStar  
                                 className = "star" 
-                                color={ratingValue <= (hover || rating) ? "#ab5b0e" : "rgb(213, 209, 209)"} 
+                                color={ratingValue <= (hover || rating) ? "#c19533" : "rgb(213, 209, 209)"} 
                                 size={30}
                                 onMouseEnter={(e)=> setHover(ratingValue)}
                                 onMouseLeave={()=> setHover(null)} />

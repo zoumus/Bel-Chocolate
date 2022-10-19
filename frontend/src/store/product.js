@@ -34,7 +34,6 @@ export const getSearchedProducts = (query) => async dispatch => {
 
     if (res.ok) {
         const data = await res.json();
-        console.log('it worked');
         dispatch(receiveProducts(data));
     }
 }

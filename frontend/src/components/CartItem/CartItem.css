@@ -183,6 +183,10 @@ textarea:focus-visible {
     padding: 2vh;
 }
 
+.gift-text:hover {
+    background-color: antiquewhite;
+}
+
 .total-total {
     padding-bottom: 1vh;
 }
