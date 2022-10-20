@@ -84,7 +84,7 @@ const ReviewIndex  = () => {
     
             <div className="review-container">
                 <div className="whrite-reviews">
-                    <div className="review-header">Review</div>
+                    <div className="review-header">Review <span>({reviews.length})</span></div>
                     <button onClick={()=>{ 
                         setSelectedReview(null)
                         setShowModal(true)

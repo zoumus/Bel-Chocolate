@@ -6,13 +6,24 @@ import { useLocation } from 'react-router-dom';
 const Footer = () => {
     const location = useLocation();
 
-    const foot_footer = () =>{
-        if (location.pathname === "/"){
-            return "brown"
-        } else {
-            return 'yellow'
-        }
-   }
+//     const foot_footer = () =>{
+//         if (location.pathname === "/"){
+//             return "brown"
+//         } else {
+//             return 'yellow'
+//         }
+//    }
+const foot_footer = () =>{
+    if (location.pathname === "/"){
+        return "brown"
+    } else if (location.pathname === "/About") {
+        return "pink"
+    } else if (location.pathname === "/products" || location.pathname === "/acount" || location.pathname === "/login" || location.pathname === "/signup" || location.pathname === "/products/category/1" || location.pathname === "/products/category/2" || location.pathname === "/products/category/3"){
+      return "yellow"
+    } else {
+      return 'yellow'
+    }
+  }
     return (
         <div id="main-footer" className={foot_footer()}>
             <div className='main-footer-content'>
