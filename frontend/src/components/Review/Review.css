@@ -224,7 +224,7 @@ input[type="radio"] {
 .had-review-box:hover .had-review-button-hover {
         visibility: visible;
         max-width: 180px;
-        background-color: gold;
+        background-color: #fffde9;
         margin-top: 8px;
         border-radius: 4px;
         padding: 8px 10px 8px;

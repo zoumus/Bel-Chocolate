@@ -2,8 +2,16 @@
     background-color: #fffde9;
 }
 .empty-cart {
+    background-color: #fffde9;
     width: 100vw;
-    height: 70vh;
+    height: 76vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.empty-cart-holder {
+    padding-bottom: 20vh;
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -12,10 +20,25 @@
 
 .empty-cart-message {
     padding: 1vw;
+    font-size: 1vw;
+    font-family: poppinsNav;
 }
 
 .empty-cart-link {
     cursor: pointer;
+    font-size: 1.2vw;
+    font-weight: bold;
+    margin-top: 3vh;
+    
+}
+.empty-cart-link a {
+    background-color: rgb(31, 29, 29);
+    color: white;
+    padding: 1vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-family: poppinsNav;
+    text-decoration: none;
 }
 
 .cart-remove {

@@ -46,11 +46,13 @@ const CartItemIndex = () => {
         return (
     
             <div className='empty-cart'>
-               <div className="empty-cart-message">
-                        <h1>Your cart is empty!</h1>
-                </div>
-                <div className="empty-cart-link">
-                    <Link to="/products">Shop Our Products</Link>
+                <div className='empty-cart-holder'>
+                    <div className="empty-cart-message">
+                            <h1>Your cart is empty!</h1>
+                    </div>
+                    <div className="empty-cart-link">
+                        <Link to="/products">Shop Our Products</Link>
+                    </div>
                 </div>
             </div>
         ) 
