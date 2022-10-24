@@ -187,9 +187,13 @@ input[type="radio"] {
 .review-header {
     font-size: 1.8vw;
 }
-.write-a-review {
-    padding: 1vh;
+
+.review-header span {
+    color: rgb(155, 152, 152)
 }
+/* .write-a-review {
+    padding: 1vh;
+} */
 
 .errors {
     display: flex;
@@ -200,6 +204,55 @@ input[type="radio"] {
     margin-bottom: 1vh;
     list-style: none;
     font-weight: bold;
+}
+.had-review-button{
+    border: none;
+    background-color: black;
+    font-size: 16px;
+    font-weight: bolder;
+    border-radius: 3px;
+    color: white;
+    padding: 7px 12px 7px;
+}
+
+.had-review-box .had-review-button-hover{
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+.had-review-box:hover .had-review-button-hover {
+        visibility: visible;
+        max-width: 180px;
+        background-color: gold;
+        margin-top: 8px;
+        border-radius: 4px;
+        padding: 8px 10px 8px;
+        text-align: center;
+        margin-left: -80px;
+        box-shadow: 5px 5px 8px -3px #bbbbbb;
+}
+
+.had-review-button:hover{
+    background-color: rgb(61, 61, 61);
+}
+
+.review-header-button {
+    border: none;
+    background-color: black;
+    font-size: 16px;
+    font-weight: bolder;
+    border-radius: 3px;
+    padding: 7px 12px 7px;
+}
+
+.review-header-button:hover{
+    background-color: rgb(61, 61, 61);
+}
+
+.review-header-button a {
+    color: white;
+    text-decoration: none;
 }
 
 

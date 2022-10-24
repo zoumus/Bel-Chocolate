@@ -22,7 +22,7 @@ const AboutPage = () => {
                     <h1 className="about-header">Chocolate Lover</h1>
                     <div className="about-desc">Yes I'm a chocolate lover, Who doesn’t love chocolate? Chocolate is so good that sometimes it’s hard to find the right words to describe your favourite chocolate.
                     <br></br>
-                    Hey, I'M Zuzu  and I'm a full-stack software engineer with experience in Javascript, React, Redux, Node, Ruby on Rails, and PostgresQL.
+                    Hey, I'm Zuzu  and I'm a full-stack software engineer with experience in Javascript, React, Redux, Node, Ruby on Rails, and PostgreSQL.
                     <br></br>
                     I chose to clone this website particularly for it's clean, modern, and easily navigatable layout.</div>
                 </div>
