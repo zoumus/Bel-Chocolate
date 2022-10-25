@@ -22,11 +22,11 @@ const ReviewIndex  = () => {
         if (rating===1){
              return (
                 <div>
-                    <FaStar color="#c19533"/>
-                    <FaStar color="grey"/>
-                    <FaStar color="grey"/>
-                    <FaStar color="grey"/>
-                    <FaStar color="grey"/>
+                    <FaStar color="#c18653"/>
+                    <FaStar color="#6c7668"/>
+                    <FaStar color="#6c7668"/>
+                    <FaStar color="#6c7668"/>
+                    <FaStar color="#6c7668"/>
 
                 </div>
             )
@@ -35,11 +35,11 @@ const ReviewIndex  = () => {
         if (rating===2){
          return (
              <div>
-                 <FaStar color="#c19533"/>
-                 <FaStar color="#c19533"/>
-                 <FaStar color="grey"/>
-                 <FaStar color="grey"/>
-                 <FaStar color="grey"/>
+                 <FaStar color="#c18653"/>
+                 <FaStar color="#c18653"/>
+                 <FaStar color="#6c7668"/>
+                 <FaStar color="#6c7668"/>
+                 <FaStar color="#6c7668"/>
 
               </div>
          )
@@ -47,11 +47,11 @@ const ReviewIndex  = () => {
          if (rating===3){
                   return (
              <div>
-                 <FaStar color="#c19533"/>
-                 <FaStar color="#c19533"/>
-                 <FaStar color="#c19533"/>
-                 <FaStar color="grey"/>
-                 <FaStar color="grey"/>
+                 <FaStar color="#c18653"/>
+                 <FaStar color="#c18653"/>
+                 <FaStar color="#c18653"/>
+                 <FaStar color="#6c7668"/>
+                 <FaStar color="#6c7668"/>
 
               </div>
          )
@@ -59,11 +59,11 @@ const ReviewIndex  = () => {
          if (rating===4){
                   return (
              <div>
-                 <FaStar color="#c19533"/>
-                 <FaStar color="#c19533"/>
-                 <FaStar color="#c19533"/>
-                 <FaStar color="#c19533"/>
-                 <FaStar color="grey"/>
+                 <FaStar color="#c18653"/>
+                 <FaStar color="#c18653"/>
+                 <FaStar color="#c18653"/>
+                 <FaStar color="#c18653"/>
+                 <FaStar color="#6c7668"/>
 
               </div>
          )
@@ -71,11 +71,11 @@ const ReviewIndex  = () => {
          if (rating===5){
                   return (
              <div>
-                 <FaStar color="#c19533"/>
-                 <FaStar color="#c19533"/>
-                 <FaStar color="#c19533"/>
-                 <FaStar color="#c19533"/>
-                 <FaStar color="#c19533"/>
+                 <FaStar color="#c18653"/>
+                 <FaStar color="#c18653"/>
+                 <FaStar color="#c18653"/>
+                 <FaStar color="#c18653"/>
+                 <FaStar color="#c18653"/>
               </div>
         )}}
     const about_button = () => {
@@ -150,25 +150,3 @@ const ReviewIndex  = () => {
 }
 
 export default ReviewIndex; 
-
-
-// {/* <button onClick={()=>{ 
-//                         setSelectedReview(null)
-//                         setShowModal(true)
-//                         }} className="write-a-review">Write a Review
-//                     </button> */}
-//                     {/* <div className='button-hover'>You've already submitted a review of this item</div> */}
-
-
-// {reviews.map(review=> (
-//     (review.id === currentUserId) ?
-//         (<div className="had-review-box">
-//             <button className="had-review-button">Write a review</button> 
-//             <div className="had-review-button-hover">You've already submitted a review of this item</div>
-//         </div>)
-//         :
-//         (<button onClick={()=>{ 
-//             setSelectedReview(null)
-//             setShowModal(true)
-//             }} className="review-header-button">Write a Review </button>)
-//         ))}

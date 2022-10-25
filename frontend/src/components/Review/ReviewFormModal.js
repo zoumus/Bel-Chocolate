@@ -82,7 +82,7 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
                     
                     <form onSubmit={handleSubmit} className="modal-form">
                     <div className='star-header'>
-                    <div className="rating-form"><span className="modal-headers">Overall Rating</span></div>
+                    <div className="rating-form"><span className="modal-headers">Overall Rating:</span></div>
                     <div>
                     {[...Array(5)].map((star, i) => {
                     const ratingValue = i + 1;
@@ -98,7 +98,7 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
 
                             <FaStar  
                                 className = "star" 
-                                color={ratingValue <= (hover || rating) ? "#c19533" : "rgb(213, 209, 209)"} 
+                                color={ratingValue <= (hover || rating) ? "#c18653" : "rgb(213, 209, 209)"} 
                                 size={30}
                                 onMouseEnter={(e)=> setHover(ratingValue)}
                                 onMouseLeave={()=> setHover(null)} />
@@ -108,7 +108,7 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
                             </div>
                             </div>
                             <br/>
-                        <label><span className='modal-headers'>Review Title</span>
+                        <label className='modal-headers'>Review Title:
                         <br/>
                             <input 
                                 className="title-form"
@@ -120,8 +120,7 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
                         </label>
                         <br/>
                         <br/>
-                        <label><span className='modal-headers'>Review</span>
-                            <br/>
+                        <label className='modal-headers'>Review:
                             <textarea 
                                 className="body-form"
                                 rows="5" 
@@ -136,7 +135,7 @@ const ReviewFormModal = ({setShowModal,selectedReview}) => {
                         <div className="errors">{validationErrors.map((error, i) => {
                         return <li key={i}>{error}</li>
                     })}</div>
-                        <button type="submit"  className="modal-button">Submit Review</button>
+                        <div id='submit-review-button'><button type="submit"  className="modal-button">Submit Review</button></div>
                  </form>
             </div>
          </>
