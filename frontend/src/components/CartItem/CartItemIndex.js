@@ -80,8 +80,11 @@ const CartItemIndex = () => {
                 </div>
                 <div className="cart-last">
                 <div className="gift">
-                        <h1 className="gift-header">🎁 Add a Gift Note 🎁</h1>
-                        <h1 className="gift-text">Tip: emoji and special characters aren't supported, remember to include who the order is from!</h1>
+                        <div className="gift-header">🎁 Add a Gift Note 🎁</div>
+                        <div className='gift-text-box'>
+                            <div className="gift-text">Tip: emoji and special characters aren't supported, remember to include who the order is from!</div>
+                            <div className="gift-text-hover">Not Availble</div>
+                        </div>
                 </div>
                 <div className="total-price">
                     <h1 className="total-total">total: ${calcTotal() + '.00'}</h1> 

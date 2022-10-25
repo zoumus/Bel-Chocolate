@@ -236,10 +236,10 @@ input[type="radio"] {
     border: none;
     background-color: black;
     font-size: 16px;
-    font-weight: bolder;
+    /* font-weight: bolder; */
     border-radius: 3px;
     color: white;
-    padding: 7px 12px 7px;
+    padding: 10px 12px 7px;
 }
 
 .had-review-box .had-review-button-hover{
@@ -268,9 +268,9 @@ input[type="radio"] {
     border: none;
     background-color: black;
     font-size: 16px;
-    font-weight: bolder;
+    /* font-weight: bolder; */
     border-radius: 3px;
-    padding: 7px 12px 7px;
+    padding: 10px 12px 7px;
 }
 
 .review-header-button:hover{
@@ -284,5 +284,4 @@ input[type="radio"] {
 
 .edit-delete {
     font-size: 2.2vh;
-    /* font-weight: bold; */
 }

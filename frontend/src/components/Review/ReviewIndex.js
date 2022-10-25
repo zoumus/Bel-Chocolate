@@ -81,9 +81,7 @@ const ReviewIndex  = () => {
     const about_button = () => {
         // reviews.map(review => {
             let eachReview = Object.values(reviews)
-            console.log(eachReview, 'eachReview')
             if (currentUser && eachReview.map(review => (review.userId === currentUserId)).some(val => val === true)){
-                console.log('josiah')
                 return (<div className="had-review-box">
                     <button className="had-review-button">Write a review</button> 
                     <div className="had-review-button-hover">You've already submitted a review of this item</div>
