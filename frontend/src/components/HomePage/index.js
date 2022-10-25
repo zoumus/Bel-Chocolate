@@ -34,6 +34,7 @@ function HomePage() {
             <Products/>
             <InfinitAutoplay/>
             <ReviewsPpl/>
+            <Footer/>
         </>
 
     )

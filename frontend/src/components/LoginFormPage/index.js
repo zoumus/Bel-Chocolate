@@ -3,6 +3,7 @@ import * as sessionActions from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import './LoginForm.scss';
+import Footer from "../Footer/Footer";
 
 function LoginFormPage() {
   const dispatch = useDispatch();
@@ -37,7 +38,8 @@ function LoginFormPage() {
   }
 
   return (
-    <div className="login-backg">
+    <>
+      <div className="login-backg">
     
     <div className='loginForm'>
       <form onSubmit={handleSubmit}>
@@ -77,8 +79,11 @@ function LoginFormPage() {
           </div>
       </form>
     </div>
-     
     </div>
+    <Footer/>
+    </>
+    
+  
   );
 }
 

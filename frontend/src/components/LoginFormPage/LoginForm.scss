@@ -19,15 +19,24 @@
         padding: 13px 15px;
     }
 }
+
+.loginForm form {
+    font-family: poppinsNav;
+}
 .create-account {
     margin-bottom: 1.5vh;
 }
 .login-logout-header {
-    font-family: "Cosmica-Regular";
-    font-size: 3vh;
+    // font-family: "Cosmica-Regular";
+    font-size: 2.5vh;
     line-height: 1.5;
     // padding: 1.5vh;
     margin-bottom: 1.5vh;
+}
+
+#formItem {
+    background-color: #fffde9;
+    font-family: poppinsNav;
 }
 
 #textHeader {
@@ -70,6 +79,7 @@ button {
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-family: poppinsNav;
 }
 #bottomForm span {
     cursor: pointer;

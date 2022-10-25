@@ -3,6 +3,7 @@ import topoAbout from './aboutImages/about-topo.webp'
 import zuzuAbout from './aboutImages/zuzu.jpg'
 import zuzuChoc from './aboutImages/zuzuzuzu.jpg'
 import "./AboutPage.css"
+import Footer from "../Footer/Footer"
 
 const AboutPage = () => {
 
@@ -30,7 +31,7 @@ const AboutPage = () => {
 
             <div className='chocolate-hand'><img src={zuzuChoc} alt=""/></div>
 
-            
+            <Footer/>  
         </>
         
     )

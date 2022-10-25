@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import * as sessionActions from "../../store/session";
+import Footer from "../Footer/Footer";
 import './SignupForm.scss';
 
 function SignupFormPage() {
@@ -38,7 +39,8 @@ function SignupFormPage() {
   };
 
   return (
-    <div className="login-backg">
+    <>
+        <div className="login-backg">
       <div className='signup-form'>
           <form onSubmit={handleSubmit}>
             <div className='text-header'>
@@ -50,6 +52,7 @@ function SignupFormPage() {
         </ul>
         <label>
           <input
+            className='formItem'
             type="text"
             value={email}
             placeholder='Email'
@@ -60,6 +63,7 @@ function SignupFormPage() {
         <label>
           
           <input
+            className='formItem'
             type="text"
             value={firstName}
             placeholder='First Name'
@@ -70,6 +74,7 @@ function SignupFormPage() {
         <label>
           
           <input
+            className='formItem'
             type="text"
             value={lastName}
             placeholder='Last Name'
@@ -80,6 +85,7 @@ function SignupFormPage() {
         <label>
           
           <input
+            className='formItem'
             type="password"
             value={password}
             placeholder='Password'
@@ -90,6 +96,7 @@ function SignupFormPage() {
         <label>
           
           <input
+            className='formItem'
             type="password"
             value={confirmPassword}
             placeholder='Confirm Password'
@@ -100,7 +107,9 @@ function SignupFormPage() {
         <button type="submit" className='signup-button'>CREATE MY ACOUNT</button>
       </form>
       </div>
-    </div>  
+    </div> 
+    <Footer/>
+    </> 
   );
 }
 
