@@ -37,7 +37,7 @@ const foot_footer = () =>{
                 <a className="social-link" href="https://angel.co/u/zuzu-chaoui" target="_blank">
                 <i className="fab fa-angellist"></i>
                 <p className="social-link-label"> AngelList</p></a>
-                <a className="social-link" href="https://angel.co/u/zuzu-chaoui" target="_blank">
+                <a className="social-link" href="https://zoumus.github.io/Portfolio/" target="_blank">
                 <i className="fas fa-folder-open"></i>
                 <p className="social-link-label"> Portfolio</p></a>
                 <a className="social-link" href="mailto:zehourchaoui@gmail.com" target="_blank">
