@@ -6,6 +6,7 @@ With PostgresSQL as a database and Rails as a backend, BelChocolate is able to s
 
 ![](https://github.com/zoumus/Bel-Chocolate/blob/main/frontend/src/assets/gifImages/ezgif.com-gif-maker%20(4).gif)
 
+
 # Technologies
 
 * AWS S3
@@ -18,31 +19,40 @@ With PostgresSQL as a database and Rails as a backend, BelChocolate is able to s
 * PostgresSQL
 * Heroku
 
+
 ## Features
 
 1. Sign in/ Register
 
 BelChocolate has a fully functional user auth system, with error handling. A user's sign in status will affect what feature they have access to. If the user is not signed in and tries to use a feature that requires log in, the sign in/ register page will appear and prompt them to sign in/ register. Users have the option to use a demo account to navigate the site.
 
+
 ![](https://github.com/zoumus/Bel-Chocolate/blob/main/frontend/src/assets/gifImages/ezgif.com-gif-maker%20(2).gif)
+
 
 2. Reviews
 
 On a listing's show page, the user will have the option to leave a review along with a star rating. There is error handling - a review will not be submitted and a message will pop up if the user does not fill in all fields. After posting a review, the user can edit or delete said review by clicking the corresponding buttons. Only reviews made by the current user can be edited and deleted.
 
+
 ![](https://github.com/zoumus/Bel-Chocolate/blob/main/frontend/src/assets/gifImages/ezgif.com-gif-maker%20(3).gif)
+
 
 3. Cart
 
 Users can add specified quantities of Products to cart and have access to update or delete a specified item.
 
+
 ![](https://github.com/zoumus/Bel-Chocolate/blob/main/frontend/src/assets/gifImages/ezgif.com-gif-maker%20(1).gif)
+
 
 4. Search
 
 Here users can type in any letter/word, and a list of product including said letter/word in the name will immediately render/modify as the input changes. Each search item listed is a link that will navigate users to the specific product's show page.
 
+
 ![](https://github.com/zoumus/Bel-Chocolate/blob/main/frontend/src/assets/gifImages/ezgif.com-gif-maker.gif)
+
 
 # Future Features
 * Add payment feature
