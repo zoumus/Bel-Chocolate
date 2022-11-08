@@ -44,3 +44,7 @@ Here users can type in any letter/word, and a list of product including said let
 
 ![](https://github.com/zoumus/Bel-Chocolate/blob/main/frontend/src/assets/gifImages/ezgif.com-gif-maker.gif)
 
+# Future Features
+* Add payment feature
+* Make the app more responsive
+
