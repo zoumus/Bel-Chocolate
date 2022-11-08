@@ -7,9 +7,11 @@ const GetProductSearch = () => {
 
     if(products.length === 0) {
         return (
-            <div id="no-products-icon">
-                <div className="no-products">Sorry, no results could be found!</div>
-                <div className="fasadtear"><FaSadTear id="fa-cry"/></div>
+            <div className="research-no-product">
+                <div id="no-products-icon">
+                    <div className="no-products">Sorry, no results could be found!</div>
+                    <div className="fasadtear"><FaSadTear id="fa-cry"/></div>
+                </div>
             </div>
         ) 
     }
@@ -17,8 +19,12 @@ const GetProductSearch = () => {
     if(!products.length) return null;
 
     return (
-        <div className='search-items'>
-            {products.map(product => <ProductIndexItem key={product.id} product={product}/>)}
+        <div className="research-with-product">
+            <div className="research-with">
+                <div className='search-items'>
+                    {products.map(product => <ProductIndexItem key={product.id} product={product}/>)}
+                </div>
+            </div>
         </div>
     )
 }

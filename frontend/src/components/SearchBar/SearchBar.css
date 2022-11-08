@@ -97,7 +97,7 @@
 #no-products-icon {
     display: flex;
     width: 100vw;
-    height: 80vh;
+    height: 87vh;
     justify-content:center;
     align-items: center;
 }
@@ -110,4 +110,22 @@
 #fa-cry {
     margin-left: .8vw;
     transform: scale(1.3);
+}
+
+.research-no-product {
+    width: 100vw;
+    height: max-content;
+    background-color: #fffde9;
+}
+
+.research-with-product {
+  background-color: #fffde9;
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 4vh;
+}
+
+.research-with {
+  width: 100%;
+  height: 100%;
 }

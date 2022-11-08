@@ -5,14 +5,7 @@ import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
     const location = useLocation();
-
-//     const foot_footer = () =>{
-//         if (location.pathname === "/"){
-//             return "brown"
-//         } else {
-//             return 'yellow'
-//         }
-//    }
+    
 const foot_footer = () =>{
     if (location.pathname === "/"){
         return "brown"
