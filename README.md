@@ -4,6 +4,8 @@ With PostgresSQL as a database and Rails as a backend, BelChocolate is able to s
 
 [BelChocolate Live URL](https://bel-chocolate.herokuapp.com/#/)
 
+![](https://github.com/zoumus/Bel-Chocolate/blob/main/frontend/src/assets/gifImages/ezgif.com-gif-maker%20(4).gif)
+
 ---
 
 ## Features
